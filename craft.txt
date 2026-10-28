@@ -1,0 +1,71 @@
+## 10. Starter Catalog — 15 Craftable SKUs
+
+| # | SKU | Metal | Weight (g) | Stone | Technique | Bench time (hr) | Material cost (ZAR) | Labor (ZAR) | Retail (ZAR) | Profit (ZAR) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Classic Plain Band 3mm | 9k Au | 3.0 | — | Fabricate | 0.75 | 2,414 | 375 | 6,136 | 3,347 |
+| 2 | Classic Plain Band 3mm | 925 Ag | 3.0 | — | Fabricate | 0.75 | 120 | 375 | 1,118 | 623 |
+| 3 | Signet Ring (oval table) | 9k Au | 5.0 | — | Fabricate + engrave | 3.5 | 4,023 | 1,750 | 12,699 | 6,926 |
+| 4 | Signet Ring (oval table) | 925 Ag | 5.0 | — | Fabricate + engrave | 3.0 | 200 | 1,500 | 3,850 | 2,150 |
+| 5 | Initial Pendant (single letter) | 9k Au | 1.5 | — | Pierce/saw | 1.5 | 1,207 | 750 | 4,303 | 2,346 |
+| 6 | Initial Pendant (single letter) | 925 Ag | 1.5 | — | Pierce/saw | 1.25 | 60 | 625 | 1,573 | 888 |
+| 7 | Name Necklace (4 letters) | 9k Au | 2.5 | — | Pierce + chain | 2.5 | 2,011 | 1,250 | 7,172 | 3,911 |
+| 8 | Name Necklace (4 letters) | 925 Ag | 2.5 | — | Pierce + chain | 2.0 | 100 | 1,000 | 2,530 | 1,430 |
+| 9 | Bezel Pendant (round cab) | 9k Au | 2.0 | CZ/Cab R600 | Bezel set | 2.5 | 1,609 + 600 | 1,250 | 7,822 | 4,363 |
+| 10 | Bezel Pendant (round cab) | 925 Ag | 2.0 | CZ/Cab R400 | Bezel set | 2.0 | 80 + 400 | 1,000 | 3,292 | 1,812 |
+| 11 | Stud Earrings (pair) | 9k Au | 1.2 | — | Fabricate | 1.5 | 965 | 750 | 3,774 | 2,059 |
+| 12 | Stud Earrings (pair) | 925 Ag | 1.2 | — | Fabricate | 1.25 | 48 | 625 | 1,539 | 866 |
+| 13 | Solid Bangle (open) | 9k Au | 8.0 | — | Form + solder | 2.5 | 6,436 | 1,250 | 16,889 | 9,203 |
+| 14 | Solid Bangle (open) | 925 Ag | 8.0 | — | Form + solder | 2.0 | 320 | 1,000 | 3,036 | 1,716 |
+| 15 | Chain Repair (solder + polish) | 925/9k | 0.0 | — | Repair | 0.5 | 0 | 250 | 650 | 400 |
+
+*Material costs use spot + ~2% premium; retail uses 2.2× (gold) / 2.3× (silver) of (material + labor); profit = retail − (material + labor). Adjust for actual spot on the day.*
+
+---
+
+## 11. Kanban Cards
+
+### To Do
+- [ ] **Set up home studio bench** — bench, pin, torch (propane/oxy), flex shaft, polishing motor, mandrels, files; add fume extraction. (Est. R25k–R60k; reuse existing tools where possible.)
+- [ ] **Register hallmark / maker's mark** — apply via Jewellery Council of SA; get stamps made.
+- [ ] **Open accounts with suppliers** — MetCon (grain/sheet), local findings wholesalers, Mr K (scrap/recycled), Gold Reef City Mint (bullion).
+- [ ] **Build price list & quote template** — spot-based material + labor + making charge; 50% deposit policy.
+- [ ] **Create sample set (one of each SKU)** — for photography and client show-and-tell.
+- [ ] **Photography setup** — light box, macro lens, consistent backgrounds.
+
+### In Progress
+- [ ] **Heirloom redesign service page** — tiers, pricing, consent form, before/after photo protocol.
+- [ ] **Bespoke commission workflow doc** — enquiry → sketch → quote → deposit → fabricate → QC → deliver.
+- [ ] **Time-tracking habit** — log bench minutes per SKU to refine labor estimates (use Craftybase-style formula).
+
+### Done (when completed)
+- [ ] **First 5 SKUs fabricated & photographed** — Classic Band (Au/Ag), Initial Pendant (Au/Ag), Chain Repair.
+- [ ] **First heirloom redesign delivered** — case study with before/after + testimonial.
+- [ ] **First bespoke commission delivered** — full workflow validated end-to-end.
+
+### Backlog / Avoid
+- [ ] **Do NOT buy casting kit** — outsource casting; revisit only if volume justifies (kiln + vacuum + investment).
+- [ ] **Do NOT offer pave/micro-pave** until microscope + advanced setting training acquired.
+- [ ] **Do NOT fabricate platinum** until dedicated tool set and torch upgrade purchased.
+
+---
+
+## 12. Sources
+
+1. Gold price (ZAR/gram by karat), South Africa — goldrate24.com, 26 Oct 2026. https://www.goldrate24.com/gold-prices/africa/south_africa/
+2. Silver spot XAGUSD 1.73 USD/g; USD/ZAR 16.63 — goldrate24.com spot panel, 26 Oct 2026.
+3. Platinum spot ~USD 49.5/g (≈ZAR 823/g) — money metals exchange reference (USD/oz), 2026.
+4. Metal Concentrators (MetCon) — refinery + jeweller services, 999.9 refining. https://metcon.co.za/ ; https://jewellersnetwork.co.za/metal-concentrators/
+5. Rand Refinery — VAP products, Krugerrands, Germiston. https://www.randrefinery.com/
+6. Gold Reef City Mint — Jewellery Council of SA directory. https://www.jewellery.org.za/directory/gold-reef-city-mint-pty-ltd
+7. Jewellery Council of South Africa — member directory (suppliers/setters/engravers). https://www.jewellery.org.za/directory
+8. Mr K precious metals dealer — branches Tygervalley/Durbanville/Somerset West/Durban. Jewellery Council directory.
+9. Jewelry pricing formula (Materials + Labor) × 2 + Extras; labor pro-rated. Metalsmith Society. https://metalsmithsociety.com/blog/how-to-price-your-jewelry-guide-for-independent-jewelers
+10. Jewelry pricing formula: labor = minutes/60 × hourly rate. Craftybase. https://craftybase.com/blog/jewelry-pricing-formula
+11. Handmade jewelry labor rates $20–$60/hr reference; pricing guidance. https://dazedandtopazed.com/blogs/news/how-to-price-your-handcrafted-jewelry-a-practical-guide-for-jewelers-and-metalsmiths
+12. Heirloom redesign service examples and pricing (USD, for benchmarking). Abby Sparks Jewelry, Bario Neal, Shelter, Vinca, Exodus Goldsmiths. https://www.abbysparks.com/heirloom-jewelry-redesign/
+13. Home studio tools & torch selection (propane/oxygen, flex shaft, mandrels, files). Silvera Jewelry School; Metalsmith Society; Nancy L.T. Hamilton. https://www.silverajewelry.com/ ; https://metalsmithsociety.com/blog/how-to-choose-a-torch-for-jewelry-making
+14. Casting vs fabrication discussion (density/hardness, sculptural forms). r/jewelers. https://www.reddit.com/r/jewelers/comments/1j771xi/casting_vs_fabricating_by_hand_is_one_of_thebetter/
+15. Bezel setting technique references. Nancy L.T. Hamilton; Alloy Metalsmithing. https://nancylthamilton.com/techniques/stone-setting/bezel-making-setting-and-soldering/
+16. South Africa gold price history & karat table. goldrate24.com (26 Oct 2026).
+
+*All prices are illustrative and spot-dependent; re-quote on the day of fabrication. ZAR figures assume 26–27 Oct 2026 spot levels.*

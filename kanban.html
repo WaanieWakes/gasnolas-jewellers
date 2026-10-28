@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jewelry Business — Research Kanban Board</title>
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --panel: #16213e;
+    --card: #1f2b4d;
+    --accent: #0f3460;
+    --text: #eaeaea;
+    --muted: #a0a8c0;
+    --border: #2a3555;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); }
+  header { padding: 20px 24px; border-bottom: 1px solid var(--border); background: linear-gradient(135deg,#16213e,#0f3460); }
+  header h1 { margin:0; font-size: 1.6rem; }
+  header p { margin:6px 0 0; color: var(--muted); font-size:.95rem; }
+  .toolbar { display:flex; flex-wrap:wrap; gap:12px; align-items:center; padding:16px 24px; border-bottom:1px solid var(--border); background: var(--panel); }
+  .toolbar label { color: var(--muted); font-size:.9rem; }
+  select, input { background: var(--accent); color: var(--text); border:1px solid var(--border); border-radius:8px; padding:8px 12px; font-size:.9rem; }
+  select:focus, input:focus { outline: none; border-color:#4a6fa5; }
+  .progress-wrap { flex:1; min-width:200px; }
+  .progress-label { display:flex; justify-content:space-between; font-size:.85rem; color: var(--muted); margin-bottom:4px; }
+  .progress-bar { height:10px; background: var(--accent); border-radius:6px; overflow:hidden; }
+  .progress-fill { height:100%; background: linear-gradient(90deg,#4caf50,#81c784); transition: width .3s; }
+  .board { display:flex; gap:16px; padding:20px 24px; overflow-x:auto; min-height:60vh; }
+  .column { flex:0 0 300px; background: var(--panel); border-radius:12px; padding:12px; display:flex; flex-direction:column; border:1px solid var(--border); }
+  .column-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+  .column-header h2 { margin:0; font-size:1.05rem; }
+  .count { background: var(--accent); border-radius:999px; padding:2px 10px; font-size:.8rem; }
+  .card-list { flex:1; min-height:120px; display:flex; flex-direction:column; gap:10px; padding:4px; border-radius:8px; transition: background .2s; }
+  .card-list.drag-over { background: rgba(255,255,255,0.05); }
+  .card { background: var(--card); border-radius:10px; padding:12px; border-left:4px solid #888; cursor:grab; user-select:none; transition: transform .1s, box-shadow .1s; }
+  .card:active { cursor:grabbing; }
+  .card.dragging { opacity:.5; }
+  .card-title { font-weight:600; margin-bottom:6px; font-size:.95rem; }
+  .card-desc { font-size:.82rem; color: var(--muted); line-height:1.4; margin-bottom:8px; }
+  .card-meta { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+  .tag { font-size:.72rem; padding:2px 8px; border-radius:999px; background: var(--accent); color: var(--text); }
+  .priority { font-size:.72rem; padding:2px 8px; border-radius:999px; font-weight:600; }
+  .p-High { background:#e94560; color:#fff; }
+  .p-Medium-High { background:#f5a623; color:#000; }
+  .p-Medium { background:#4caf50; color:#fff; }
+  .p-Low { background:#555; color:#ddd; }
+  .track-dot { width:10px; height:10px; border-radius:50%; display:inline-block; }
+  .summary { margin:20px 24px; background: var(--panel); border-radius:12px; padding:16px 20px; border:1px solid var(--border); }
+  .summary h2 { margin:0 0 10px; font-size:1.1rem; }
+  .summary ul { margin:0; padding-left:20px; columns:2; }
+  .summary li { margin:4px 0; font-size:.9rem; }
+  .summary a { color:#8ab4f8; text-decoration:none; }
+  .summary a:hover { text-decoration:underline; }
+  footer { text-align:center; color: var(--muted); font-size:.8rem; padding:16px; }
+  @media (max-width: 720px) {
+    .board { flex-direction:column; overflow-x:visible; }
+    .column { flex:1 1 auto; }
+    .summary ul { columns:1; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>💎 Jewelry Business — Research Kanban Board</h1>
+  <p>Aggregates actionable cards from all research reports (01–09). Drag cards between columns. State persists in localStorage.</p>
+</header>
+<div class="toolbar">
+  <label>Filter by track:</label>
+  <select id="trackFilter"><option value="all">All tracks</option></select>
+  <div class="progress-wrap">
+    <div class="progress-label"><span>Overall progress</span><span id="progressText">0/0</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  </div>
+  <button id="resetBtn" style="background:#e94560;color:#fff;border:none;border-radius:8px;padding:8px 14px;cursor:pointer;">Reset</button>
+</div>
+<div class="board" id="board"></div>
+<div class="summary">
+  <h2>📚 Research Summary</h2>
+  <ul id="summaryList"></ul>
+</div>
+<footer>Built from D:/AI_Lab/research reports · Dark theme #1a1a2e</footer>
+
+<script>
+const TRACKS = {
+  "Local Commerce": {color:"#e94560", file:"research/01_local_commerce_sa.md"},
+  "Trending Products": {color:"#f5a623", file:"research/02_trending_products.md"},
+  "Craftable Pieces": {color:"#4caf50", file:"research/03_craftable_pieces.md"},
+  "Pricing & Gold Rates": {color:"#ffd700", file:"research/04_pricing_gold_rates.md"},
+  "Website & Ecommerce": {color:"#2196f3", file:"research/05_website_ecommerce.md"},
+  "Marketing Channels": {color:"#9c27b0", file:"research/06_marketing_channels.md"},
+  "Ethical & Sustainable": {color:"#00bcd4", file:"research/07_ethical_sustainable.md"},
+  "Bespoke & Custom Market": {color:"#ff9800", file:"research/08_bespoke_custom_market.md"},
+  "YouTube Insights": {color:"#e91e63", file:"research/09_youtube_insights.md"}
+};
+
+const COLUMNS = ["Backlog","To Do","In Progress","Review","Done"];
+
+// Cards: [id, title, description, track, priority, initialColumn]
+const CARDS = [
+["c001","Register the business (CIPC + SARS)","Register as sole proprietor (or Pty Ltd), obtain tax number, evaluate Turnover Tax vs. VAT.","Local Commerce","High","To Do"],
+["c002","Set up the digital stack","Google Business Profile (with photos of workshop/pieces), WhatsApp Business number, simple one-page website with price list and WhatsApp link.","Local Commerce","High","To Do"],
+["c003","Obtain jeweller's permit + JCSA accreditation","Apply via SADPMR (Precious Metals Act 37 of 2005); join JCSA for accredited member badge and directory listing.","Local Commerce","High","To Do"],
+["c004","Arrange insurance","Jewelers' Block policy (inventory + transit + customer property) via local broker; confirm home insurance covers business activity.","Local Commerce","High","To Do"],
+["c005","Build the service menu & pricing sheet","Publish making charge per gram (e.g., R80–R250/g by complexity), repair price list, remodeling quote process, valuation fees; add lay-by terms.","Local Commerce","Medium-High","To Do"],
+["c006","Set up payments","Open PayFast account (cards + Instant EFT + SnapScan); create Ozow/Paystack EFT links for WhatsApp; add manual EFT details; test end-to-end.","Local Commerce","Medium-High","To Do"],
+["c007","Establish shipping workflow","Open accounts with The Courier Guy (insured, door-to-door) and PUDO; create packaging SOP with photos/insurance for >R2,000 pieces; add Paxi for low-value.","Local Commerce","Medium","To Do"],
+["c008","Launch acquisition campaign","Click-to-WhatsApp ads on Facebook/Instagram targeting local bridal/engagement audience; post in #ImStaying and local business groups; ask first 10 clients for Google reviews.","Local Commerce","Medium","To Do"],
+
+["c009","Research Fairmined gold suppliers accessible in South Africa","Identify Fairmined/Fairtrade gold suppliers reachable in SA.","Trending Products","Medium","Backlog"],
+["c010","Source moissanite/lab-grown diamond suppliers (SA or import)","Find moissanite and lab-grown diamond suppliers locally or for import.","Trending Products","High","Backlog"],
+["c011","Build price list for Top 10 SKUs in ZAR","Cost and retail price list for the prioritised Top 10 SKUs.","Trending Products","Medium","Backlog"],
+["c012","Design & prototype SKU #1: yellow-gold engagement ring (oval moissanite, micro-pavé)","Bespoke yellow-gold engagement ring with oval moissanite and micro-pavé band.","Trending Products","High","To Do"],
+["c013","Design & prototype SKU #2: custom name pendant (3 font styles)","Custom name/initial pendant in 3 font styles.","Trending Products","Medium-High","To Do"],
+["c014","Create stacking ring sizing kit & sample set","Sizing kit and sample set for stacking rings.","Trending Products","Medium","To Do"],
+["c015","Set up Instagram/TikTok content plan (behind-the-scenes, result-first format)","Content plan for Instagram/TikTok with behind-the-scenes and result-first format.","Trending Products","Medium","To Do"],
+["c016","Market research: global + SA 2026 jewelry trends compiled","Global and SA 2026 jewelry trends research completed.","Trending Products","Medium","Done"],
+["c017","Trend lifecycle classification completed","Lifecycle stage classification for all 2026 trends.","Trending Products","Low","Done"],
+["c018","Top 10 SKUs prioritized for hand-craftsman","Top 10 SKUs ranked by demand, margin, craft advantage, SA fit.","Trending Products","Medium","Done"],
+["c019","Platinum bespoke tooling (budget/equipment) — needs capital decision","Platinum tooling requires capital decision; blocked.","Trending Products","High","Backlog"],
+["c020","Richline SA closure impact on local supply chain — monitor","Monitor impact of Richline SA closure on local supply chain.","Trending Products","Medium","Backlog"],
+
+["c021","Set up home studio bench","Bench, pin, torch (propane/oxy), flex shaft, polishing motor, mandrels, files; add fume extraction. (Est. R25k–R60k; reuse existing tools where possible.)","Craftable Pieces","High","To Do"],
+["c022","Register hallmark / maker's mark","Apply via Jewellery Council of SA; get stamps made.","Craftable Pieces","High","To Do"],
+["c023","Open accounts with suppliers","MetCon (grain/sheet), local findings wholesalers, Mr K (scrap/recycled), Gold Reef City Mint (bullion).","Craftable Pieces","Medium-High","To Do"],
+["c024","Build price list & quote template","Spot-based material + labor + making charge; 50% deposit policy.","Craftable Pieces","Medium-High","To Do"],
+["c025","Create sample set (one of each SKU)","Sample set for photography and client show-and-tell.","Craftable Pieces","Medium","To Do"],
+["c026","Photography setup","Light box, macro lens, consistent backgrounds.","Craftable Pieces","Medium","To Do"],
+["c027","Heirloom redesign service page","Tiers, pricing, consent form, before/after photo protocol.","Craftable Pieces","Medium-High","In Progress"],
+["c028","Bespoke commission workflow doc","Enquiry → sketch → quote → deposit → fabricate → QC → deliver.","Craftable Pieces","Medium","In Progress"],
+["c029","Time-tracking habit","Log bench minutes per SKU to refine labor estimates.","Craftable Pieces","Low","In Progress"],
+["c030","First 5 SKUs fabricated & photographed","Classic Band (Au/Ag), Initial Pendant (Au/Ag), Chain Repair.","Craftable Pieces","Medium","Backlog"],
+["c031","First heirloom redesign delivered","Case study with before/after + testimonial.","Craftable Pieces","Medium","Backlog"],
+["c032","First bespoke commission delivered","Full workflow validated end-to-end.","Craftable Pieces","Medium","Backlog"],
+["c033","Do NOT buy casting kit","Outsource casting; revisit only if volume justifies (kiln + vacuum + investment).","Craftable Pieces","Low","Backlog"],
+["c034","Do NOT offer pave/micro-pave","Until microscope + advanced setting training acquired.","Craftable Pieces","Low","Backlog"],
+["c035","Do NOT fabricate platinum","Until dedicated tool set and torch upgrade purchased.","Craftable Pieces","Low","Backlog"],
+
+["c036","Build Dad's cost-sheet spreadsheet","Columns: date, purity, weight, spot R/g, making R/g, stone cost, margin %, retail.","Pricing & Gold Rates","Medium","In Progress"],
+["c037","Print monthly price list (9k/18k/silver + services) and date-stamp it","Monthly price list for 9k/18k/silver + services, date-stamped.","Pricing & Gold Rates","Medium","To Do"],
+["c038","Set weekly spot check (goldprice.org / GoldBroker)","Re-quote if gold moves > 2%.","Pricing & Gold Rates","Medium","To Do"],
+["c039","Create standard quotation template","Itemised: metal, making, stones, setting, extras, wastage, total, 50% deposit, lead time.","Pricing & Gold Rates","Medium-High","To Do"],
+["c040","Add 3–5% currency buffer to overhead line","Review rand rate monthly.","Pricing & Gold Rates","Medium","To Do"],
+["c041","Collect 5 local jeweller quotes (mall + independent)","Plain 18k band to calibrate competitive band.","Pricing & Gold Rates","Medium","To Do"],
+["c042","Decide metal-buying cadence","Buy per job vs batch when rand strong; consider Krugerrand as hedge.","Pricing & Gold Rates","Medium","To Do"],
+["c043","Confirm VAT registration threshold and invoicing rules","With a SA tax practitioner.","Pricing & Gold Rates","High","To Do"],
+["c044","Photograph finished pieces to support value-based pricing","For bespoke work portfolio.","Pricing & Gold Rates","Low","Backlog"],
+["c045","Set making-charge tariff sheet by complexity","Simple/standard/complex/bespoke; share with clients.","Pricing & Gold Rates","Medium","To Do"],
+
+["c046","Decide platform (Shopify vs Shopstar vs WooCommerce)","Based on budget & maintenance appetite.","Website & Ecommerce","High","To Do"],
+["c047","Register domain + set up hosting (if WooCommerce)","Domain registration and hosting setup.","Website & Ecommerce","Medium","To Do"],
+["c048","Open PayFast merchant account + complete KYC verification","PayFast merchant onboarding.","Website & Ecommerce","High","To Do"],
+["c049","Create Google Business Profile + upload 30 photos","GBP creation with 30+ photos.","Website & Ecommerce","High","To Do"],
+["c050","Design '49 Years' badge + 'Handcrafted in South Africa' label assets","Trust badge and label design.","Website & Ecommerce","Medium","To Do"],
+["c051","Photograph full catalogue (white bg + lifestyle)","Full product photography.","Website & Ecommerce","Medium","To Do"],
+["c052","Write 6-page site copy + policies (POPIA, returns, shipping)","Site copy and legal policies.","Website & Ecommerce","Medium","To Do"],
+["c053","Set up WhatsApp Business + catalogue + quick replies","WhatsApp Business setup.","Website & Ecommerce","Medium-High","To Do"],
+["c054","Configure Bob Go / courier accounts + shipping zones","Shipping configuration.","Website & Ecommerce","Medium","To Do"],
+["c055","Platform setup & theme customization","Platform and theme setup.","Website & Ecommerce","Medium","In Progress"],
+["c056","Product upload with SEO titles/descriptions + schema","Product upload with SEO and schema.","Website & Ecommerce","Medium","In Progress"],
+["c057","Local citation building (Yelp SA, Yellow Pages, Hotfrog, Cylex, SA Jewellery Council)","Local SEO citations.","Website & Ecommerce","Medium","In Progress"],
+["c058","End-to-end test orders (card, EFT, mobile)","Launch gate verification.","Website & Ecommerce","Medium","Review"],
+["c059","Speed test <2.5s on mobile","Mobile performance check.","Website & Ecommerce","Medium","Review"],
+["c060","Trust signals placed at decision points","Trust signal placement.","Website & Ecommerce","Medium","Review"],
+["c061","Review request flow live (email + WhatsApp + QR on packaging)","Review request automation.","Website & Ecommerce","Medium","Review"],
+["c062","Soft launch to existing customers for first 10 Google reviews","Soft launch for initial reviews.","Website & Ecommerce","Medium","Review"],
+["c063","Public launch + social announcement","Public launch.","Website & Ecommerce","High","Review"],
+["c064","Add Ozow/Yoco for additional payment methods","Additional payment methods.","Website & Ecommerce","Low","Backlog"],
+["c065","Enable Meta Catalogue sync for WhatsApp shopping","WhatsApp catalogue sync.","Website & Ecommerce","Low","Backlog"],
+["c066","International shipping (DHL/FedEx) + multi-currency (Paystack/Stripe)","International expansion.","Website & Ecommerce","Low","Backlog"],
+["c067","Blog content for city keywords (2/month)","SEO blog content.","Website & Ecommerce","Low","Backlog"],
+["c068","BNPL (Mobicred/MoreTyme) for pieces >R1,000","Buy-now-pay-later option.","Website & Ecommerce","Low","Backlog"],
+["c069","Custom ring builder / 3D viewing (if scaling)","Advanced product viewer.","Website & Ecommerce","Low","Backlog"],
+["c070","Marketplace presence (Takealot) as additional channel","Takealot marketplace.","Website & Ecommerce","Low","Backlog"],
+
+["c071","Define brand positioning & one-line pitch","Brand positioning and pitch.","Marketing Channels","High","Backlog"],
+["c072","Set up WhatsApp Business (profile, catalog, quick replies, labels)","WhatsApp Business setup.","Marketing Channels","Medium-High","Backlog"],
+["c073","Create Instagram + Facebook pages","Social media profiles.","Marketing Channels","Medium-High","Backlog"],
+["c074","Create & verify Google Business Profile (SAB)","GBP creation and verification.","Marketing Channels","High","Backlog"],
+["c075","Build photo/video content bank (15+ assets)","Content asset bank.","Marketing Channels","Medium","Backlog"],
+["c076","Write 30-caption content bank + hashtag sets","Caption and hashtag bank.","Marketing Channels","Medium","Backlog"],
+["c077","List on Pink Book / SA Weddings directories","Wedding directory listings.","Marketing Channels","Medium","Backlog"],
+["c078","Build partner kit (referral cards, display tray, QR)","Partner referral kit.","Marketing Channels","Medium","Backlog"],
+["c079","Apply to craft markets (Kamers, Linden, Bay Harbour, Neighbourgoods)","Craft market applications.","Marketing Channels","Medium","Backlog"],
+["c080","Apply to bridal fairs (Oakfield, Cape Town Winter, Say I Do)","Bridal fair applications.","Marketing Channels","Medium","Backlog"],
+["c081","Set up Meta Ads (R50/day test)","Meta ads test campaign.","Marketing Channels","Medium","Backlog"],
+["c082","Set up Google Search Ads (R100/day test)","Google search ads test.","Marketing Channels","Medium","Backlog"],
+["c083","Identify 30 nano/micro creators for gifting","Creator outreach list.","Marketing Channels","Medium","Backlog"],
+["c084","Pitch 5 corporate gifting prospects","Corporate gifting pitches.","Marketing Channels","Medium","Backlog"],
+["c085","Complete GBP verification","Finish GBP verification.","Marketing Channels","High","To Do"],
+["c086","Add 20 items to WhatsApp catalog","WhatsApp catalog items.","Marketing Channels","Medium","To Do"],
+["c087","Post 4 Reels + 1 TikTok","Social content posting.","Marketing Channels","Medium","To Do"],
+["c088","Join 5 FB community groups","Facebook group joining.","Marketing Channels","Low","To Do"],
+["c089","Outreach to 5 wedding planners","Wedding planner outreach.","Marketing Channels","Medium","To Do"],
+["c090","Ask 5 clients for Google reviews","Google review requests.","Marketing Channels","Medium","To Do"],
+["c091","Content batching (weekly shoot day)","Weekly content batching.","Marketing Channels","Medium","In Progress"],
+["c092","Partner outreach & kit delivery","Partner outreach execution.","Marketing Channels","Medium","In Progress"],
+["c093","Ad testing & optimization","Ad optimization.","Marketing Channels","Medium","In Progress"],
+["c094","Brand name & handle secured","Brand name secured.","Marketing Channels","Low","Done"],
+["c095","WhatsApp Business number active","WhatsApp number active.","Marketing Channels","Low","Done"],
+["c096","Social profiles created","Social profiles created.","Marketing Channels","Low","Done"],
+["c097","GBP created (pending verification)","GBP created, pending verification.","Marketing Channels","Medium","Done"],
+["c098","Audit current metal & stone suppliers","List all sources; request written origin/KP guarantees; file certificates","Ethical & Sustainable","High","Backlog"],
+["c099","Segregate & label metal stock","Separate verified/recycled from unverified; weigh-in/weigh-out logs","Ethical & Sustainable","High","Backlog"],
+["c100","Design provenance card template","Maker, metal origin, stone cert, date made, care instructions","Ethical & Sustainable","High","Backlog"],
+["c101","Formalize repair & remodel service","Pricing, process, marketing copy; 'recast your gold' offer","Ethical & Sustainable","High","Backlog"],
+["c102","Send bench scrap to refiner","Contact Rand Refinery/local refiner; keep receipts; market as recast","Ethical & Sustainable","Medium","Backlog"],
+["c103","Switch to GIA/EGL-certified stones only","Update supplier list; provide grading report with every sale","Ethical & Sustainable","High","Backlog"],
+["c104","'Our Story' website page","49-year journey, ethical commitments, certificates, (future) logos","Ethical & Sustainable","High","Backlog"],
+["c105","Instagram/TikTok bench content plan","Weekly behind-the-bench videos, repair before/afters, 49-yr narrative","Ethical & Sustainable","High","Backlog"],
+["c106","Register on Twyg directory","Sustainable jewelry directory listing","Ethical & Sustainable","Medium","Backlog"],
+["c107","Apply for Fairmined licensee (Labeled)","Contact info@fairmined.org; budget USD 75/yr + USD 300/3yr audit","Ethical & Sustainable","High","Backlog"],
+["c108","Join RJC micro-enterprise","USD 365/yr; SME toolkit; Code of Practices self-assessment","Ethical & Sustainable","Medium","Backlog"],
+["c109","Fairmined capsule collection","One ring/pendant line in Fairmined gold; stamp label once licensed","Ethical & Sustainable","High","Backlog"],
+["c110","Annual sustainability statement","Publish what's certified, in progress, not yet - transparency builds trust","Ethical & Sustainable","Medium","Backlog"],
+["c111","RJC Code of Practices certification","Audit within 1.5 yrs; 3-yr cycle + surveillance at 12-18 months","Ethical & Sustainable","Medium","Backlog"],
+["c112","Ethical gemstone supplier collaboration","Co-designed capsule collection; shared credibility & audience","Ethical & Sustainable","Medium","Backlog"],
+["c113","Enter sustainability award","Local design/sustainability award entry","Ethical & Sustainable","Low","Backlog"],
+["c114","Studio footprint audit","Energy, waste, packaging; switch to biodegradable cleaning + recyclable packaging","Ethical & Sustainable","Low","Backlog"],
+["c115","Heirloom registry for clients","Record provenance per piece; enable future remodels by descendants","Ethical & Sustainable","Low","Backlog"],
+["c116","Fairmined Ecological Gold premium line","Chemical-free gold for premium collection once volume justifies","Ethical & Sustainable","Low","Backlog"],
+["c117","Fairtrade Gold licensing (export markets)","For UK/EU export readiness","Ethical & Sustainable","Low","Backlog"],
+["c118","Engagement ring enquiry from Instagram DM","Engagement ring enquiry from Instagram DM; budget R30k; send consultation booking link.","Bespoke & Custom Market","Medium-High","Backlog"],
+["c119","Heirloom redesign enquiry (grandmother's ring)","Heirloom redesign: client has grandmother's ring; book appraisal intake.","Bespoke & Custom Market","Medium-High","Backlog"],
+["c120","Wedding band pair enquiry","Wedding band pair enquiry; send metal/width options + per-gram price list.","Bespoke & Custom Market","Medium-High","Backlog"],
+["c121","Consultation: WhatsApp video","Consultation: [client], WhatsApp video; prep stone options.","Bespoke & Custom Market","Medium-High","Backlog"],
+["c122","In-person heirloom intake + appraisal","In-person heirloom intake + appraisal; photograph & weigh; issue receipt.","Bespoke & Custom Market","Medium-High","Backlog"],
+["c123","CAD render: solitaire 6-prong","CAD render: solitaire 6-prong, 18ct YG, 0.8ct oval lab diamond; v1.","Bespoke & Custom Market","Medium","Backlog"],
+["c124","Hand sketch options for heirloom remount","Hand sketch options for heirloom remount (3 concepts).","Bespoke & Custom Market","Medium","Backlog"],
+["c125","Revise render per client feedback","Revise render per client feedback (narrower band); v2.","Bespoke & Custom Market","Medium","Backlog"],
+["c126","Send final render + quote","Send final render + quote; await written approval.","Bespoke & Custom Market","High","Backlog"],
+["c127","Issue invoice (50% deposit)","Issue invoice (50% deposit); confirm EFT receipt before starting.","Bespoke & Custom Market","High","Backlog"],
+["c128","Sign commission agreement","Sign commission agreement (DocuSign/WhatsApp).","Bespoke & Custom Market","High","Backlog"],
+["c129","Print wax model","Print wax model; client approval of physical model (optional).","Bespoke & Custom Market","Medium","Backlog"],
+["c130","Cast 18ct YG band","Cast 18ct YG band; clean & prepare setting.","Bespoke & Custom Market","Medium","Backlog"],
+["c131","Set 0.8ct oval diamond","Set 0.8ct oval diamond; check security.","Bespoke & Custom Market","Medium","Backlog"],
+["c132","Polish, rhodium plate, engrave","Polish, rhodium plate, engrave initials + date.","Bespoke & Custom Market","Medium","Backlog"],
+["c133","Heirloom: melt & re-alloy gold","Heirloom: melt & re-alloy gold; cast; set reused stones.","Bespoke & Custom Market","Medium","Backlog"],
+["c134","QC: setting security, polish, sizing, engraving","QC: setting security, polish, sizing, engraving; photograph.","Bespoke & Custom Market","High","Backlog"],
+["c135","Balance invoice; arrange courier","Balance invoice; arrange courier (insured) or in-person handover.","Bespoke & Custom Market","High","Backlog"],
+["c136","Delivery reveal","Delivery reveal; resizing window 30 days; aftercare card.","Bespoke & Custom Market","High","Backlog"],
+["c137","30-day check-in","30-day check-in; offer free clean/polish; request review/referral.","Bespoke & Custom Market","Medium","Backlog"],
+["c138","Annual service reminder","Annual service reminder; insurance appraisal update.","Bespoke & Custom Market","Medium","Backlog"],
+["c139","Research Fairmined gold suppliers accessible in South Africa","Identify Fairmined/Fairtrade gold suppliers reachable in SA.","YouTube Insights","Medium","Backlog"],
+["c140","Source moissanite/lab-grown diamond suppliers (SA or import)","Find moissanite and lab-grown diamond suppliers locally or for import.","YouTube Insights","High","Backlog"],
+["c141","Build price list for Top 10 SKUs in ZAR","Cost and retail price list for the prioritised Top 10 SKUs.","YouTube Insights","Medium","Backlog"],
+["c142","Platinum bespoke tooling (budget/equipment) — needs capital decision","Platinum tooling requires capital decision; blocked.","YouTube Insights","High","Backlog"],
+["c143","Richline SA closure impact on local supply chain — monitor","Monitor impact of Richline SA closure on local supply chain.","YouTube Insights","Medium","Backlog"],
+["c144","Medical alert jewelry niche — research certification requirements (medical alert organizations)","Medical alert jewelry certification requirements research.","YouTube Insights","Medium","Backlog"],
+["c145","Fingerprint jewelry (3D tactile) — research specialized molding/casting techniques","Specialized molding/casting for fingerprint jewelry.","YouTube Insights","Medium","Backlog"],
+["c146","E-waste recycled gold — research extraction/refining process and suppliers","E-waste gold extraction/refining research.","YouTube Insights","Low","Backlog"],
+["c147","Interchangeable element jewelry — design starter sets + element catalog","Starter sets and element catalog design.","YouTube Insights","Medium","Backlog"],
+["c148","NFC-embedded jewelry — research chip sourcing and embedding techniques","Chip sourcing and embedding research.","YouTube Insights","Low","Backlog"],
+["c149","Prosthetic-adaptive jewelry — partner with prosthetists/OTs for requirements","Prosthetic-adaptive jewelry requirements.","YouTube Insights","Low","Backlog"],
+["c150","Chemo patient jewelry — partner with oncology centers/support groups","Chemo patient jewelry partnerships.","YouTube Insights","Low","Backlog"],
+["c151","Online customization tool (name preview, star map, birth flower)","Online customization tool development.","YouTube Insights","Low","Backlog"],
+["c152","Editorial/media coverage — pitch trend stories to SA publications","Pitch trend stories to SA publications.","YouTube Insights","Low","Backlog"],
+["c153","Fairmined gold sourcing — needs SA supplier research","Fairmined gold sourcing research (blocked).","YouTube Insights","Medium","Backlog"],
+["c154","Lab-grown diamond sourcing — needs SA or import supplier","Lab-grown diamond sourcing (blocked).","YouTube Insights","High","Backlog"],
+["c155","Medical alert jewelry certification — needs organization research","Medical alert certification research (blocked).","YouTube Insights","Low","Backlog"],
+["c156","Pick 3 starter niches: bespoke engagement, name/initial pendants, heirloom redesign","Pick 3 starter niches.","YouTube Insights","High","To Do"],
+["c157","Create variation strategy for each bestseller (dome ring → dome huggies/hoops/bracelet)","Variation strategy for bestsellers.","YouTube Insights","Medium","To Do"],
+["c158","Set up WhatsApp Business + catalog (20 pieces) + quick replies + labels","WhatsApp Business setup with catalog.","YouTube Insights","High","To Do"],
+["c159","Create & verify Google Business Profile (SAB, service area)","GBP creation and verification.","YouTube Insights","High","To Do"],
+["c160","Fabricate sample set: classic band (Au/Ag), initial pendant (Au/Ag), chain repair","Sample set fabrication.","YouTube Insights","High","To Do"],
+["c161","Build spot-based price list (2.0–3.0× markup, 50% deposit policy)","Spot-based price list.","YouTube Insights","High","To Do"],
+["c162","Start content engine: 4–5 Reels/week (behind-bench, heirloom stories, before/after, education)","Content engine launch.","YouTube Insights","High","To Do"],
+["c163","Outreach to 5 wedding planners (sample + referral cards, 10–15% commission)","Wedding planner outreach.","YouTube Insights","High","To Do"],
+["c164","Consider men's jewelry line: signet rings, chains, bracelets, brooches","Men's jewelry line consideration.","YouTube Insights","Medium","To Do"],
+["c165","Consider medical alert jewelry as niche add-on (leather cuffs, hidden compartments)","Medical alert niche add-on.","YouTube Insights","Medium","To Do"],
+["c166","Apply to craft markets (Kamers, Linden, Bay Harbour, Neighbourgoods)","Craft market applications.","YouTube Insights","Medium","To Do"],
+["c167","Apply to bridal fairs (Oakfield, Cape Town Winter, Say I Do)","Bridal fair applications.","YouTube Insights","Medium","To Do"],
+["c168","Identify 30 nano/micro creators for gifting (lifestyle, bridal, fashion, mom)","Nano/micro creator list.","YouTube Insights","Medium","To Do"],
+["c169","Set up Meta Ads (R50/day test) + Google Search Ads (R100/day test)","Meta + Google ads test.","YouTube Insights","Medium","To Do"],
+["c170","Heirloom redesign service tiers (Refresh R1,500–R3,500 / Restyle R4,000–R9,000 / Full Transformation R10,000–R25,000+)","Heirloom redesign service tiers.","YouTube Insights","High","In Progress"],
+["c171","Men's jewelry collection development (signet rings, chains, bracelets)","Men's jewelry collection development.","YouTube Insights","Medium","In Progress"],
+["c172","Content batching (weekly shoot day)","Weekly content batching.","YouTube Insights","Medium","In Progress"],
+["c173","Partner outreach & kit delivery","Partner outreach execution.","YouTube Insights","Medium","In Progress"],
+["c174","Market research: YouTube jewelry business videos analyzed (8 sources)","YouTube research completed.","YouTube Insights","Medium","Done"],
+["c175","Niche selection framework compiled (9 niches with craftsman-fit assessment)","Niche selection framework.","YouTube Insights","Medium","Done"],
+["c176","40 product ideas filtered to craftsman-feasible (Tier 1/2/3)","Product ideas filtered.","YouTube Insights","Medium","Done"],
+["c177","Trending vs declining styles mapped (2026)","Trending vs declining styles.","YouTube Insights","Medium","Done"],
+["c178","Pricing/margin insights synthesized from videos + existing research","Pricing/margin insights.","YouTube Insights","Medium","Done"],
+["c179","Marketing tactics catalog compiled (14 tactics with priority)","Marketing tactics catalog.","YouTube Insights","Medium","Done"],
+["c180","Actionable recommendations for Dad (20 items, 4 time horizons)","Actionable recommendations.","YouTube Insights","High","Done"],
+];
+
+// State
+const STORAGE_KEY = "jewelry_kanban_state_v1";
+function defaultState() {
+  const cols = {}; COLUMNS.forEach(c=>cols[c]=[]);
+  CARDS.forEach(c => { cols[c[5]].push(c[0]); });
+  return { columns: cols };
+}
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const s = JSON.parse(raw);
+      // validate
+      if (s && s.columns) {
+        // ensure all cards present
+        const present = new Set();
+        COLUMNS.forEach(c => (s.columns[c]||[]).forEach(id=>present.add(id)));
+        CARDS.forEach(c => { if(!present.has(c[0])) { (s.columns[c[5]]||s.columns["Backlog"]).push(c[0]); } });
+        // remove unknown
+        COLUMNS.forEach(c => { s.columns[c] = (s.columns[c]||[]).filter(id=>CARDS.some(x=>x[0]===id)); });
+        return s;
+      }
+    }
+  } catch(e){}
+  return defaultState();
+}
+let state = loadState();
+function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+
+const cardMap = Object.fromEntries(CARDS.map(c=>[c[0],c]));
+
+// Build UI
+const board = document.getElementById("board");
+const colEls = {};
+COLUMNS.forEach(col => {
+  const el = document.createElement("div");
+  el.className = "column";
+  el.dataset.col = col;
+  el.innerHTML = `<div class="column-header"><h2>${col}</h2><span class="count" id="count-${col}">0</span></div><div class="card-list" data-col="${col}"></div>`;
+  board.appendChild(el);
+  colEls[col] = el.querySelector(".card-list");
+});
+
+// track filter
+const trackFilter = document.getElementById("trackFilter");
+Object.keys(TRACKS).forEach(t => {
+  const opt = document.createElement("option"); opt.value = t; opt.textContent = t; trackFilter.appendChild(opt);
+});
+
+function visible(card) {
+  const f = trackFilter.value;
+  if (f === "all") return true;
+  return card[3] === f;
+}
+
+function render() {
+  COLUMNS.forEach(col => {
+    const list = colEls[col];
+    list.innerHTML = "";
+    (state.columns[col]||[]).forEach(id => {
+      const c = cardMap[id];
+      if (!c) return;
+      if (!visible(c)) return;
+      const el = document.createElement("div");
+      el.className = "card";
+      el.draggable = true;
+      el.dataset.id = id;
+      el.style.borderLeftColor = TRACKS[c[3]].color;
+      el.innerHTML = `
+        <div class="card-title">${c[1]}</div>
+        <div class="card-desc">${c[2]}</div>
+        <div class="card-meta">
+          <span class="track-dot" style="background:${TRACKS[c[3]].color}"></span>
+          <span class="tag">${c[3]}</span>
+          <span class="priority p-${c[4]}">${c[4]}</span>
+        </div>`;
+      // drag events
+      el.addEventListener("dragstart", e => {
+        e.dataTransfer.setData("text/plain", id);
+        el.classList.add("dragging");
+      });
+      el.addEventListener("dragend", () => el.classList.remove("dragging"));
+      list.appendChild(el);
+    });
+  });
+  updateCounts();
+  updateProgress();
+}
+
+function updateCounts() {
+  COLUMNS.forEach(col => {
+    // count visible
+    let n = 0;
+    (state.columns[col]||[]).forEach(id => {
+      const c = cardMap[id];
+      if (c && visible(c)) n++;
+    });
+    document.getElementById("count-"+col).textContent = n;
+  });
+}
+
+function updateProgress() {
+  const total = CARDS.length;
+  const doneVisible = (state.columns["Done"]||[]).length;
+  // progress by all cards done
+  const doneAll = (state.columns["Done"]||[]).length;
+  const pct = total ? Math.round((doneAll/total)*100) : 0;
+  document.getElementById("progressFill").style.width = pct+"%";
+  document.getElementById("progressText").textContent = doneAll + " / " + total + " (" + pct + "%)";
+}
+
+// drop zones
+COLUMNS.forEach(col => {
+  const list = colEls[col];
+  list.addEventListener("dragover", e => { e.preventDefault(); list.classList.add("drag-over"); });
+  list.addEventListener("dragleave", () => list.classList.remove("drag-over"));
+  list.addEventListener("drop", e => {
+    e.preventDefault();
+    list.classList.remove("drag-over");
+    const id = e.dataTransfer.getData("text/plain");
+    if (!id) return;
+    // remove from all columns
+    COLUMNS.forEach(c => {
+      state.columns[c] = (state.columns[c]||[]).filter(x=>x!==id);
+    });
+    state.columns[col].push(id);
+    saveState();
+    render();
+  });
+});
+
+trackFilter.addEventListener("change", () => { render(); });
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+  if (confirm("Reset all card positions to defaults?")) {
+    state = defaultState();
+    saveState();
+    render();
+  }
+});
+
+// Summary list
+const summaryList = document.getElementById("summaryList");
+Object.entries(TRACKS).forEach(([name, info]) => {
+  const li = document.createElement("li");
+  li.innerHTML = `<a href="${info.file}" target="_blank">${name}</a> — ${info.file}`;
+  summaryList.appendChild(li);
+});
+
+render();
+</script>
+</body>
+</html>

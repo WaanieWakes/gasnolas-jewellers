@@ -1,0 +1,96 @@
+# Jewelry Pricing & Gold Rates — South Africa
+### Research report for a home-based jeweler (Dad's workshop)
+**Date of research:** 27 Oct 2026 · **Currency:** ZAR · **Spot basis:** live gold/silver spot, South Africa
+
+---
+
+## 1. Current gold price in ZAR per gram (by karat)
+
+Spot gold in South Africa is quoted per gram for each purity. Rates below are the live spot reference used by jewellers and refiners (source: goldrate24.com / worldforexrates.com, 26–27 Oct 2026). **Note: spot moves daily; treat these as a baseline and re-pull on the day of quoting.**
+
+| Purity | Hallmark | Fine-gold % | ZAR / gram (spot) | USD / gram |
+|---|---|---|---|---|
+| 24k | 999 | 99.9% | **R 2,209.78** | $132.61 |
+| 23k | 958 | 95.8% | R 2,132.44 | $127.97 |
+| 22k | 916 | 91.6% | R 2,024.16 | $121.47 |
+| 21k | 875 | 87.5% | R 1,933.56 | $116.03 |
+| **18k** | **750** | **75.0%** | **R 1,657.34** | $99.46 |
+| 14k | 585 | 58.5% | R 1,292.72 | $77.58 |
+| 12k | 500 | 50.0% | R 1,104.89 | $66.31 |
+| 10k | 417 | 41.7% | R 921.48 | $55.30 |
+| **9k** | **375** | **37.5%** | **R 828.67** | $49.73 |
+| 8k | 333 | 33.3% | R 735.76 | $44.15 |
+
+- 1 troy ounce = 31.1035 g; 1 oz 24k spot ≈ R 68,724 (≈ $4,124).
+- USD/ZAR reference ≈ **R 16.55 – R 16.66** (from the gold-rate cross-check).
+
+**Practical note for Dad:** In SA the most common jewellery purities are **9k and 18k** (9k for everyday/affordable, 18k for fine/bespoke). 22k/24k are used mainly for Indian-style pieces and investment (Krugerrands). Plan stock and quoting around 9k and 18k.
+
+### Silver
+
+| Purity | Hallmark | ZAR / gram (spot) |
+|---|---|---|
+| Fine silver 999 | 999 | **R 31.8 – R 32.3** |
+| Sterling silver 925 | 925 | **≈ R 29.4 – R 29.9** (92.5% of fine) |
+| Coin silver 900 | 900 | ≈ R 28.6 – R 29.1 |
+
+Sources: silverprice.org (R 32.31/g), GoldBroker (R 31.82/g). Sterling = fine × 0.925.
+
+### Scrap / buy-back reference (what gold buyers pay in SA)
+
+The Gold Avenue (Sandton) publishes buy-back rates — useful as a floor value for old gold and as a sanity check that your quoted material cost is above scrap value:
+- 9ct: **≈ R 730/g** (vs spot R 828.67 → ~88% of spot)
+- 18ct: **≈ R 1,460/g** (vs spot R 1,657.34 → ~88% of spot)
+
+Rule of thumb: a fair buy-back is **85–90% of spot**; retail material cost should never be below buy-back.
+
+---
+
+## 2. SA jeweller benchmarks
+
+**Important context:** Tanishq and Malabar are **Indian retail chains**; they do not have a mainstream retail footprint in South Africa. They are useful only as a *reference for making-charge % and pricing discipline*, not as local competitors. In SA the relevant comparators are:
+
+| Segment | Examples | Positioning | Typical purity |
+|---|---|---|---|
+| Luxury / designer | Shimansky (Cape Town), Miller Gold & Co | Brand premium, diamond/tanzanite focus, high making % | 18k, platinum |
+| Fine custom / made-to-order | Prodiam (cutting house), Platgold, Arias Jewellery Palace | Bespoke, hand-set stones, by-appointment | 18k, 14k |
+| Mid-market retail | Local mall jewellers, chain stores | Machine-made, standard designs, volume | 9k, 14k, 18k |
+| Independent / home-based makers | Etsy Cape Town makers, Instagram jewellers, goldsmiths | Custom, low overhead, direct-to-client | 9k, 18k, silver |
+| Scrap & exchange | The Gold Avenue, cash-for-gold buyers | Buy-back / melt value | all purities |
+
+**Benchmarks from research:**
+- Indian chain making charges (Tanishq/Malabar/Kalyan) run **~6% to 25% of gold value** depending on design complexity and machine vs hand work, and have surged with gold prices (Tanishq reported moving from ~18% to ~25% over a year). Treat **10–20% of gold value** as the "chain retail" making-charge band.
+- Saudi/Asian retail reference: **5–25% of gold value** for making charges, or a **fixed R/gram** (e.g. R 8–R 60/g in SAR terms; scale to ZAR).
+- Scrap buy-back in SA: **~88% of spot** (Gold Avenue).
+- Independent/handmade makers (global norm): **2× to 4× cost** markup on materials + labour (metalsmith society / independent jeweler guides).
+
+**What this means for Dad (home-based, low overhead):** He can price **below chain retail** (no mall rent, no brand premium) but **above scrap + a thin margin**. A realistic target is **cost + 30–60% on metal, plus a clear per-gram making charge, plus stone cost + 40–80%**. This undercuts mall jewellers while paying properly for skill.
+
+---
+
+## 3. Making-charge norms in SA (R/gram by complexity)
+
+No SA jeweller publishes a universal R/gram tariff publicly; charges are quoted per piece. The table below is a **recommended working tariff for Dad**, built from global norms (fixed-rate-per-gram and % of gold value) adapted to SA labour costs and low overhead. Label quotes clearly ("making charge = labour + design + finishing").
+
+| Complexity | Description | R / gram (9k) | R / gram (18k) | % of gold value |
+|---|---|---|---|---|
+| **Simple / machine** | Plain band, simple chain, basic setting, minimal finishing | R 120 – R 200 | R 180 – R 300 | 8 – 12% |
+| **Standard** | Engagement ring, pendant with setting, engraved band | R 200 – R 350 | R 300 – R 500 | 12 – 18% |
+| **Complex / hand** | Hand-forged, filigree, multi-stone, custom design, resizing | R 350 – R 600 | R 500 – R 900 | 18 – 25% |
+| **Bespoke / artistic** | One-off design, CAD + hand finish, heirloom repair/restoration | R 600 – R 1,200+ | R 900 – R 1,800+ | 25 – 40% |
+
+**Silver making charges** (lower metal cost, similar labour): R 60 – R 250/g depending on complexity; or 15–30% of silver value.
+
+**Additional line items to always charge:**
+- Design/consultation time: R 250 – R 600/hour (or a flat R 300–R 800 design fee, refundable against the order).
+- Stone setting: R 80 – R 250 per stone (simple claw) up to R 400–R 800 (pavé/micro).
+- Engraving: R 150 – R 400.
+- Polishing/refinishing: R 100 – R 300.
+- Rhodium plating (white gold): R 250 – R 600 per piece.
+- Hallmarking/assay (if used): cost + 10%.
+
+---
+
+## 4. Pricing formulas for custom pieces
+
+### Core formula (cost-plus, recommende

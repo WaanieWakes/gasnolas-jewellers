@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gasnola's Jewellers | Handcrafted Gold &amp; Silver Jewellery - South Africa</title>
+<meta name="description" content="A 49-year veteran goldsmith now crafting from a home studio in South Africa. Bespoke engagement rings, heirloom redesigns, name necklaces and repairs — handcrafted since 1977." />
+<meta name="keywords" content="veteran jeweller South Africa, handcrafted gold jewellery, bespoke engagement rings, heirloom redesign, name necklace, 49 years goldsmith, home studio jeweller, silver jewellery SA, custom rings South Africa" />
+<link rel="canonical" href="https://example.co.za/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Gasnola's Jewellers — Handcrafted Gold &amp; Silver" />
+<meta property="og:description" content="49 years at the bench. Now crafting bespoke, ethical, heirloom jewellery from a South African home studio." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1200&q=80&auto=format&fit=crop" />
+<meta property="og:url" content="https://example.co.za/" />
+<meta property="og:locale" content="en_ZA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gasnola's Jewellers — Handcrafted Gold &amp; Silver" />
+<meta name="twitter:description" content="49 years at the bench. Bespoke, ethical, heirloom jewellery from a South African home studio." />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1200&q=80&auto=format&fit=crop" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#0a0e27',
+          gold: '#d4af37',
+          cream: '#f5f0e8',
+          rose: '#e94560',
+          'navy-soft': '#12183a',
+          'gold-soft': '#f0d98a'
+        },
+        fontFamily: {
+          display: ['"Playfair Display"', 'serif'],
+          sans: ['Inter', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "JewelleryStore",
+  "name": "Gasnola's Jewellers",
+  "description": "Handcrafted gold and silver jewellery by a 49-year veteran goldsmith, now operating from a South African home studio.",
+  "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1200&q=80&auto=format&fit=crop",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ZA"
+  },
+  "priceRange": "R650 - R25000+",
+  "telephone": "+27-78-279-5726",
+  "sameAs": ["https://wa.me/27810426334", "https://www.facebook.com/profile.php?id=100063741120418"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a bespoke ring take?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Typically 3-6 weeks from approved CAD render, including stone sourcing, fabrication, setting and QC."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with client-supplied gold?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Heirloom redesign is a signature service — we melt, refine and re-alloy your gold, with a provenance card documenting origin."}
+    },
+    {
+      "@type": "Question",
+      "name": "Are your stones certified?",
+      "acceptedAnswer": {"@type": "Answer", "text": "We use GIA/EGL-certified natural diamonds and lab-grown stones, plus moissanite and certified cabochons. Certificates supplied on request."}
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --navy: #0a0e27;
+    --gold: #d4af37;
+    --cream: #f5f0e8;
+    --rose: #e94560;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--cream); }
+  .font-display { font-family: 'Playfair Display', serif; }
+
+  .gold-shimmer {
+    background: linear-gradient(90deg, #a8892a 0%, #f0d98a 25%, #d4af37 50%, #f0d98a 75%, #a8892a 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+  @keyframes shimmer { to { background-position: 200% center; } }
+
+  .gold-gradient-bg {
+    background: linear-gradient(135deg, #d4af37 0%, #f0d98a 40%, #a8892a 100%);
+  }
+  .glass {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(212,175,55,0.18);
+  }
+  .glass-dark {
+    background: rgba(10,14,39,0.55);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(212,175,55,0.22);
+  }
+  .hero-particles { position: absolute; inset: 0; pointer-events: none; }
+  .card-hover { transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
+  .card-hover:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(212,175,55,0.18); border-color: rgba(212,175,55,0.5); }
+
+  .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+  .bento > * { grid-column: span 12; }
+  @media (min-width: 768px) {
+    .bento .b4 { grid-column: span 4; }
+    .bento .b6 { grid-column: span 6; }
+    .bento .b8 { grid-column: span 8; }
+    .bento .b3 { grid-column: span 3; }
+  }
+
+  .carousel { scroll-snap-type: x mandatory; }
+  .carousel > * { scroll-snap-align: start; }
+
+  .browser-frame { border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45); }
+  .browser-bar { background: #1a1f3d; padding: 10px 14px; display: flex; align-items: center; gap: 8px; }
+  .browser-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+  .tab-btn.active { background: rgba(212,175,55,0.18); color: #f0d98a; border-color: rgba(212,175,55,0.5); }
+
+  .progress-bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg,#d4af37,#f0d98a); transition: width 1.2s ease; }
+
+  .kanban-col { min-height: 120px; }
+
+  .timeline-line { position: absolute; left: 18px; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, #d4af37, rgba(212,175,55,0.1)); }
+
+  .img-fallback { background: linear-gradient(135deg, #1a1f3d 0%, #2a2f55 100%); }
+
+  .mobile-menu { display: none; }
+  .mobile-menu.open { display: flex; }
+
+  .ring-calc { font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 glass-dark">
+  <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-2">
+      <i data-lucide="gem" class="w-6 h-6 text-gold"></i>
+      <span class="font-display text-lg tracking-wide text-gold">Gasnola's Jewellers</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm">
+      <a href="#vision" class="hover:text-gold transition">Vision</a>
+      <a href="#market" class="hover:text-gold transition">Market</a>
+      <a href="#trending" class="hover:text-gold transition">Trending</a>
+      <a href="#collection" class="hover:text-gold transition">Collection</a>
+      <a href="#pricing" class="hover:text-gold transition">Pricing</a>
+      <a href="#mockup" class="hover:text-gold transition">Website</a>
+      <a href="#roadmap" class="hover:text-gold transition">Roadmap</a>
+      <a href="#kanban" class="hover:text-gold transition">Progress</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="https://wa.me/27810426334?text=Hi%2C%20I%27d%20like%20a%20custom%20piece%20consultation" class="hidden md:inline-flex items-center gap-2 bg-gold text-navy font-semibold px-4 py-2 rounded-full text-sm hover:opacity-90 transition">
+        <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Consult
+      </a>
+      <button id="menuBtn" class="md:hidden text-cream"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="mobile-menu flex-col px-5 pb-4 gap-3 text-sm bg-navy/95">
+    <a href="#vision" class="py-1">Vision</a>
+    <a href="#market" class="py-1">Market</a>
+    <a href="#trending" class="py-1">Trending</a>
+    <a href="#collection" class="py-1">Collection</a>
+    <a href="#pricing" class="py-1">Pricing</a>
+    <a href="#mockup" class="py-1">Website</a>
+    <a href="#roadmap" class="py-1">Roadmap</a>
+    <a href="#kanban" class="py-1">Progress</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="relative min-h-screen flex items-center overflow-hidden pt-20">
+  <canvas id="particles" class="hero-particles"></canvas>
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.12),transparent_60%)]"></div>
+  <div class="relative max-w-7xl mx-auto px-5 py-24 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-xs tracking-widest uppercase text-gold-soft mb-6" data-aos="fade-up">
+        <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span> Est. 1977 · 49 Years at the Bench
+      </div>
+      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-6" data-aos="fade-up" data-aos-delay="100">
+        The <span class="gold-shimmer">49-Year</span><br/>Masterpiece
+      </h1>
+      <p class="text-xl md:text-2xl text-cream/80 mb-3 font-light" data-aos="fade-up" data-aos-delay="200">
+        Handcrafted gold &amp; silver since 1977 — repairs · manufacturing · ready-made · now from a home studio
+      </p>
+      <p class="text-cream/60 max-w-xl mb-8" data-aos="fade-up" data-aos-delay="300">
+        Bespoke rings, heirloom redesigns, name necklaces and repairs — forged by a veteran goldsmith with 49 years of muscle memory, zero mall rent, and a story worth wearing.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-10" data-aos="fade-up" data-aos-delay="400">
+        <a href="https://wa.me/27810426334?text=Hi%2C%20I%27d%20like%20a%20custom%20piece%20consultation" class="inline-flex items-center gap-2 gold-gradient-bg text-navy font-bold px-7 py-3.5 rounded-full hover:scale-105 transition">
+          <i data-lucide="message-circle" class="w-5 h-5"></i> WhatsApp Consult
+        </a>
+        <a href="#collection" class="inline-flex items-center gap-2 glass px-7 py-3.5 rounded-full font-semibold hover:bg-white/10 transition">
+          <i data-lucide="layers" class="w-5 h-5"></i> View Catalog
+        </a>
+      </div>
+      <div class="flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="500">
+        <span class="glass px-4 py-2 rounded-full text-xs flex items-center gap-2"><i data-lucide="award" class="w-4 h-4 text-gold"></i> 49 Years</span>
+        <span class="glass px-4 py-2 rounded-full text-xs flex items-center gap-2"><i data-lucide="hammer" class="w-4 h-4 text-gold"></i> Handcrafted in SA</span>
+        <span class="glass px-4 py-2 rounded-full text-xs flex items-center gap-2"><i data-lucide="sparkles" class="w-4 h-4 text-gold"></i> Bespoke</span>
+        <span class="glass px-4 py-2 rounded-full text-xs flex items-center gap-2"><i data-lucide="recycle" class="w-4 h-4 text-gold"></i> Heirloom Redesign</span>
+      </div>
+    </div>
+    <div class="relative" data-aos="fade-left" data-aos-delay="200">
+      <div class="relative rounded-3xl overflow-hidden border border-gold/30 shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=80&auto=format&fit=crop" alt="Handcrafted gold ring on a jeweller's bench" loading="eager" class="w-full h-[520px] object-cover" onerror="this.style.display='none';this.parentElement.classList.add('img-fallback')" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 glass p-4 rounded-2xl">
+          <p class="text-xs uppercase tracking-widest text-gold mb-1">Signature Piece</p>
+          <p class="font-display text-xl">Oval Moissanite Solitaire · 18k Yellow Gold</p>
+          <p class="text-sm text-cream/60">Hand-forged · Bezel set · R 18,500+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section id="vision" class="py-24 relative">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">The Vision</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">A CEO-Grade Opportunity, Forged by Hand</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">This is not a hobby. It is a 49-year compounding asset — craft, reputation and low overhead — pointed at the fastest-growing corners of South African jewellery.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="glass rounded-2xl p-7 card-hover" data-aos="fade-up" data-aos-delay="0">
+        <i data-lucide="user" class="w-8 h-8 text-gold mb-4"></i>
+        <h3 class="font-display text-2xl mb-2">Who Dad Is</h3>
+        <p class="text-cream/70 text-sm">A goldsmith since 1977. Forty-nine years of sawing, soldering, setting and polishing. The kind of muscle memory no course can buy and no factory can replicate.</p>
+      </div>
+      <div class="glass rounded-2xl p-7 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <i data-lucide="target" class="w-8 h-8 text-gold mb-4"></i>
+        <h3 class="font-display text-2xl mb-2">The Opportunity</h3>
+        <p class="text-cream/70 text-sm">SA jewellery hits US$1.7B by 2033. Bespoke, ethical and heirloom segments grow faster than the market. A home studio undercuts mall retail by 30–50% while paying properly for skill.</p>
+      </div>
+      <div class="glass rounded-2xl p-7 card-hover" data-aos="fade-up" data-aos-delay="200">
+        <i data-lucide="zap" class="w-8 h-8 text-gold mb-4"></i>
+        <h3 class="font-display text-2xl mb-2">The Unfair Advantage</h3>
+        <p class="text-cream/70 text-sm">Salaam Gasnola — craftsman &amp; owner · Gasnola's Jewellers · repairs · manufacturing · ready-made pieces · 49 years of craft · direct-to-client via WhatsApp · heirloom redesign nobody else can credibly offer · trust that converts on day one.</p>
+      </div>
+    </div>
+    <div class="glass rounded-2xl overflow-hidden card-hover mt-10 grid md:grid-cols-2 gap-0" data-aos="fade-up">
+      <div class="relative h-72 md:h-full img-fallback">
+        <img src="assets/ma_pa.png" alt="Salaam Gasnola with family — the reason the craft continues" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+      </div>
+      <div class="p-7 flex flex-col justify-center">
+        <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Meet the Family Behind the Bench</p>
+        <h3 class="font-display text-3xl mb-3">Salaam Gasnola with Family</h3>
+        <p class="text-cream/70 text-sm">Salaam Gasnola with family — the reason the craft continues.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
+      <div class="glass rounded-2xl p-6 text-center">
+        <div class="font-display text-4xl gold-shimmer counter" data-target="49">0</div>
+        <p class="text-xs text-cream/60 mt-1 uppercase tracking-wider">Years at the bench</p>
+      </div>
+      <div class="glass rounded-2xl p-6 text-center">
+        <div class="font-display text-4xl gold-shimmer counter" data-target="1717" data-suffix="M">0</div>
+        <p class="text-xs text-cream/60 mt-1 uppercase tracking-wider">Market size 2033 (USD)</p>
+      </div>
+      <div class="glass rounded-2xl p-6 text-center">
+        <div class="font-display text-4xl gold-shimmer counter" data-target="89" data-suffix="%">0</div>
+        <p class="text-xs text-cream/60 mt-1 uppercase tracking-wider">SA internet users on WhatsApp</p>
+      </div>
+      <div class="glass rounded-2xl p-6 text-center">
+        <div class="font-display text-4xl gold-shimmer counter" data-target="180">0</div>
+        <p class="text-xs text-cream/60 mt-1 uppercase tracking-wider">Research actions queued</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSUMER INSIGHTS -->
+<section id="consumer" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Consumer Insights</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">What Buyers Actually Want</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 text-sm">
+      <div class="glass rounded-2xl p-6" data-aos="fade-up"><i data-lucide="trending-up" class="w-6 h-6 text-gold mb-2"></i><p class="text-cream/70">Investment mindset: fine jewellery as long-term store of value amid uncertainty.</p></div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="50"><i data-lucide="heart" class="w-6 h-6 text-gold mb-2"></i><p class="text-cream/70">Bespoke commands premium willingness-to-pay; bridal anchors revenue.</p></div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100"><i data-lucide="map-pin" class="w-6 h-6 text-gold mb-2"></i><p class="text-cream/70">Affluent hubs: Johannesburg &amp; Cape Town; Durban &amp; Pretoria follow.</p></div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="150"><i data-lucide="smartphone" class="w-6 h-6 text-gold mb-2"></i><p class="text-cream/70">WhatsApp-first commerce: 89% of SA internet users on WhatsApp.</p></div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200"><i data-lucide="flag" class="w-6 h-6 text-gold mb-2"></i><p class="text-cream/70">Local pride (#ImStaying) supports artisan makers; FB groups amplify.</p></div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="250"><i data-lucide="diamond" class="w-6 h-6 text-gold mb-2"></i><p class="text-cream/70">Lab-grown diamonds + investment appeal are headline growth drivers.</p></div>
+    </div>
+  </div>
+</section>
+<section id="market" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Market Opportunity</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">The Tailwinds Are Real</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">A fragmented, growing, WhatsApp-first market where a credible veteran with low overhead wins by default.</p>
+    </div>
+    <div class="bento">
+      <div class="b6 glass rounded-2xl p-7" data-aos="fade-up">
+        <p class="text-xs uppercase tracking-widest text-gold mb-2">Total Jewellery Market</p>
+        <p class="font-display text-4xl mb-1">$1.15B <span class="text-cream/40 text-2xl">→ $1.72B</span></p>
+        <p class="text-sm text-cream/60">2025 → 2033 · 5.3% CAGR (Grand View Research)</p>
+      </div>
+      <div class="b6 glass rounded-2xl p-7" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-xs uppercase tracking-widest text-gold mb-2">Luxury Segment</p>
+        <p class="font-display text-4xl mb-1">$782M <span class="text-cream/40 text-2xl">→ $1.30B</span></p>
+        <p class="text-sm text-cream/60">2026 → 2035 · 5.8% CAGR (MarkWide)</p>
+      </div>
+      <div class="b4 glass rounded-2xl p-7" data-aos="fade-up" data-aos-delay="200">
+        <p class="text-xs uppercase tracking-widest text-gold mb-2">Beaded</p>
+        <p class="font-display text-3xl mb-1">10.1%</p>
+        <p class="text-sm text-cream/60">CAGR to 2030</p>
+      </div>
+      <div class="b4 glass rounded-2xl p-7" data-aos="fade-up" data-aos-delay="300">
+        <p class="text-xs uppercase tracking-widest text-gold mb-2">Demi-Fine</p>
+        <p class="font-display text-3xl mb-1">10.0%</p>
+        <p class="text-sm text-cream/60">CAGR to 2033</p>
+      </div>
+      <div class="b4 glass rounded-2xl p-7" data-aos="fade-up" data-aos-delay="400">
+        <p class="text-xs uppercase tracking-widest text-gold mb-2">WhatsApp</p>
+        <p class="font-display text-3xl mb-1">89%</p>
+        <p class="text-sm text-cream/60">of SA internet users</p>
+      </div>
+      <div class="b6 glass rounded-2xl p-7" data-aos="fade-up" data-aos-delay="500">
+        <p class="text-xs uppercase tracking-widest text-gold mb-2">Structural Edge</p>
+        <p class="font-display text-2xl mb-1">Fragmented market</p>
+        <p class="text-sm text-cream/60">Hundreds of independents vs a handful of chains. Made-to-order is the dominant profitable model for independents (Dear Rae, Famke, Martin Nagel).</p>
+      </div>
+      <div class="b6 glass rounded-2xl p-7" data-aos="fade-up" data-aos-delay="600">
+        <p class="text-xs uppercase tracking-widest text-gold mb-2">Consumer Shift</p>
+        <p class="font-display text-2xl mb-1">Investment mindset</p>
+        <p class="text-sm text-cream/60">Fine jewellery read as a long-term store of value amid economic uncertainty. Bespoke commands premium willingness-to-pay; bridal anchors revenue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRENDING -->
+<section id="trending" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4" data-aos="fade-up">
+      <div>
+        <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Trending Now</p>
+        <h2 class="font-display text-4xl md:text-6xl font-bold">What the Market Is Buying in 2026</h2>
+      </div>
+      <p class="text-cream/60 max-w-md">Nine categories, filtered for a craftsman's bench — not a factory floor.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- cards -->
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80&auto=format&fit=crop" alt="Personalized name necklace" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-rose text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Hot</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-1">Personalized Name Necklaces</h3>
+          <p class="text-sm text-cream/60">Saw-pierced letters, 9k or sterling. The #1 volume SKU for hand-craftsman.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="50">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=600&q=80&auto=format&fit=crop" alt="Bespoke engagement ring" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-gold text-navy text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Premium</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-1">Bespoke Engagement &amp; Wedding Rings</h3>
+          <p class="text-sm text-cream/60">Oval moissanite solitaires, 6-prong, bezel. Anchor revenue, 50% deposit.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80&auto=format&fit=crop" alt="Silver fashion jewellery" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-rose text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Trending</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-1">Silver Fashion Jewellery</h3>
+          <p class="text-sm text-cream/60">Sterling 925 pieces at accessible price points. High turnover, low material cost.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="150">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80&auto=format&fit=crop" alt="Ethical fairmined gold" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Ethical</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-1">Ethical / Fairmined Gold</h3>
+          <p class="text-sm text-cream/60">Heritage + honesty positioning. Provenance cards, certified stones, repair service.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&q=80&auto=format&fit=crop" alt="Platinum bespoke" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-slate-300 text-navy text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Luxury</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-1">Platinum Bespoke</h3>
+          <p class="text-sm text-cream/60">Capital decision pending — outsource casting until volume justifies tooling.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="250">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80&auto=format&fit=crop" alt="Men's signet ring" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-navy text-gold text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider border border-gold/40">Men's</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-1">Men's Jewellery</h3>
+          <p class="text-sm text-cream/60">Signet rings, chains, bracelets, brooches. Under-served niche, high margin.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&q=80&auto=format&fit=crop" alt="Piercing huggies" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-rose text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Gen Z</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-1">Piercing / Flat Studs &amp; Huggies</h3>
+          <p class="text-sm text-cream/60">Labrets, huggies, flat backs. Fast, repeat-purchase, low material.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="350">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=600&q=80&auto=format&fit=crop" alt="Charm bracelet" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-gold text-navy text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Collectible</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-1">Charm Bracelets</h3>
+          <p class="text-sm text-cream/60">Modular, gift-driven, repeat sales. Each charm a new commission.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="400">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&q=80&auto=format&fit=crop" alt="Stacking rings" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-rose text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Layering</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-1">Stacking Rings</h3>
+          <p class="text-sm text-cream/60">Thin bands, mixed metals, sold in sets. High margin, low weight.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TRENDING VS DECLINING -->
+<section id="trendsd" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Style Direction</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Trending vs Declining (2026)</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="glass rounded-2xl p-6" data-aos="fade-up">
+        <h3 class="font-display text-xl mb-3 text-green-400">Trending (In)</h3>
+        <ul class="space-y-1.5 text-sm text-cream/70">
+          <li>• Mixed metals, layering, stacking.</li>
+          <li>• Chunky chains, sculptural cuffs.</li>
+          <li>• Signet &amp; pinky rings, monogramming.</li>
+          <li>• Personalized name/initial jewellery.</li>
+          <li>• Brooches (lapel pins, +110% Pinterest).</li>
+          <li>• Pearls reimagined; mixed-metal pendants.</li>
+          <li>• Ethical / Fairmined / recycled gold.</li>
+          <li>• Heirloom redesign &amp; upcycling.</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-display text-xl mb-3 text-rose">Declining (Out)</h3>
+        <ul class="space-y-1.5 text-sm text-cream/70">
+          <li>• Mass-produced beaded/Y2K pieces.</li>
+          <li>• Heavy ornate traditional sets (in SA).</li>
+          <li>• Titanium piercing (machining, not hand).</li>
+          <li>• Generic fast-fashion plated jewellery.</li>
+          <li>• Thin, flimsy chains without substance.</li>
+          <li>• Overly ornate filigree (unless bespoke).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="seasonal" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Seasonal Demand</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">South Africa's Jewellery Calendar</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+      <div class="glass rounded-xl p-5" data-aos="fade-up"><p class="text-gold font-semibold">Feb</p><p class="text-cream/60">Valentine's — pendants, rings, earrings.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="50"><p class="text-gold font-semibold">Mar–Apr</p><p class="text-cream/60">Easter weddings; autumn collections.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="100"><p class="text-gold font-semibold">May</p><p class="text-cream/60">Mother's Day — pearl pendants, charms.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="150"><p class="text-gold font-semibold">Jun–Aug</p><p class="text-cream/60">Bridal season ramps; engagement rings.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="200"><p class="text-gold font-semibold">Sep</p><p class="text-cream/60">Heritage Day — local pride pieces.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="250"><p class="text-gold font-semibold">Nov–Dec</p><p class="text-cream/60">Festive gifting, corporate gifts, markets.</p></div>
+    </div>
+  </div>
+</section>
+<section id="collection" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-10" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Craftable Collection</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">15 SKUs. Ready to Fabricate.</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">Spot-based costing, labor logged, retail set. Fabrication-first — no casting kit required.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-2 mb-8" data-aos="fade-up">
+      <button class="filter-btn active tab-btn glass px-4 py-2 rounded-full text-sm" data-filter="all">All</button>
+      <button class="filter-btn tab-btn glass px-4 py-2 rounded-full text-sm" data-filter="gold">9k Gold</button>
+      <button class="filter-btn tab-btn glass px-4 py-2 rounded-full text-sm" data-filter="silver">Sterling Silver</button>
+      <button class="filter-btn tab-btn glass px-4 py-2 rounded-full text-sm" data-filter="mixed">Mixed / Repair</button>
+    </div>
+    <div id="skuGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Pricing &amp; Gold Dashboard</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Transparent. Spot-Based. Defensible.</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">Material cost + making charge + stone. Re-quote on the day of fabrication.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+      <div class="glass rounded-2xl p-6" data-aos="fade-up">
+        <h3 class="font-display text-2xl mb-4">Gold &amp; Silver Spot (ZAR/g, 26–27 Oct 2026)</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead><tr class="text-gold border-b border-gold/20"><th class="text-left py-2">Purity</th><th class="text-left py-2">Hallmark</th><th class="text-right py-2">ZAR/g</th></tr></thead>
+            <tbody class="text-cream/80">
+              <tr><td>24k</td><td>999</td><td class="text-right">2,209.78</td></tr>
+              <tr><td>22k</td><td>916</td><td class="text-right">2,024.16</td></tr>
+              <tr class="bg-gold/10"><td class="font-semibold">18k</td><td>750</td><td class="text-right font-semibold">1,657.34</td></tr>
+              <tr><td>14k</td><td>585</td><td class="text-right">1,292.72</td></tr>
+              <tr class="bg-gold/10"><td class="font-semibold">9k</td><td>375</td><td class="text-right font-semibold">828.67</td></tr>
+              <tr><td>925 Silver</td><td>925</td><td class="text-right">29.65</td></tr>
+              <tr><td>Fine Silver 999</td><td>999</td><td class="text-right">32.05</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-cream/40 mt-3">USD/ZAR ≈ 16.6. Scrap buy-back floor ≈ 88% of spot. Retail material cost must never sit below buy-back.</p>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-display text-2xl mb-4">Making-Charge Tariff (R/gram)</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead><tr class="text-gold border-b border-gold/20"><th class="text-left py-2">Complexity</th><th class="text-right py-2">9k</th><th class="text-right py-2">18k</th><th class="text-right py-2">% of gold</th></tr></thead>
+            <tbody class="text-cream/80">
+              <tr><td>Simple / machine</td><td class="text-right">120–200</td><td class="text-right">180–300</td><td class="text-right">8–12%</td></tr>
+              <tr><td>Standard</td><td class="text-right">200–350</td><td class="text-right">300–500</td><td class="text-right">12–18%</td></tr>
+              <tr><td>Complex / hand</td><td class="text-right">350–600</td><td class="text-right">500–900</td><td class="text-right">18–25%</td></tr>
+              <tr><td>Bespoke / artistic</td><td class="text-right">600–1,200+</td><td class="text-right">900–1,800+</td><td class="text-right">25–40%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-cream/40 mt-3">Silver making: R 60–250/g or 15–30% of silver value. Plus design R 250–600/hr, setting R 80–800, engraving R 150–400, rhodium R 250–600.</p>
+      </div>
+    </div>
+
+    <div class="glass rounded-2xl p-7 mb-12" data-aos="fade-up">
+      <h3 class="font-display text-2xl mb-3">Pricing Formula</h3>
+      <code class="block bg-navy/60 rounded-xl p-4 text-gold-soft text-sm ring-calc overflow-x-auto">
+        Retail = (Material Cost + Making Charge) × Multiplier + Stone Cost<br/>
+        Material Cost = Weight (g) × Spot (ZAR/g) × 1.02 (premium)<br/>
+        Multiplier = 2.2 (gold) / 2.3 (silver) · Stone markup = +40–80%
+      </code>
+      <p class="text-xs text-cream/40 mt-3">Independent/handmade norm: 2x–4x cost. Dad targets cost + 30–60% on metal, undercutting mall retail while paying for skill.</p>
+    </div>
+
+    <!-- CALCULATOR -->
+    <div class="glass rounded-2xl p-7" data-aos="fade-up">
+      <h3 class="font-display text-2xl mb-5">Custom Ring Quote Calculator</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="space-y-4">
+          <div>
+            <label class="text-sm text-cream/70">Metal</label>
+            <select id="calcMetal" class="w-full mt-1 bg-navy/60 border border-gold/20 rounded-lg px-3 py-2 text-cream">
+              <option value="9k">9k Gold (R 828.67/g)</option>
+              <option value="18k">18k Gold (R 1,657.34/g)</option>
+              <option value="ag">Sterling Silver (R 29.65/g)</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-sm text-cream/70">Weight (grams)</label>
+            <input id="calcWeight" type="number" step="0.1" value="4.0" class="w-full mt-1 bg-navy/60 border border-gold/20 rounded-lg px-3 py-2 text-cream" />
+          </div>
+          <div>
+            <label class="text-sm text-cream/70">Making complexity</label>
+            <select id="calcComplex" class="w-full mt-1 bg-navy/60 border border-gold/20 rounded-lg px-3 py-2 text-cream">
+              <option value="120">Simple (R 120/g for 9k)</option>
+              <option value="200" selected>Standard (R 200/g for 9k)</option>
+              <option value="350">Complex (R 350/g for 9k)</option>
+              <option value="600">Bespoke (R 600/g for 9k)</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-sm text-cream/70">Stone cost (ZAR, 0 if none)</label>
+            <input id="calcStone" type="number" value="0" class="w-full mt-1 bg-navy/60 border border-gold/20 rounded-lg px-3 py-2 text-cream" />
+          </div>
+          <button id="calcBtn" class="gold-gradient-bg text-navy font-bold px-6 py-2.5 rounded-full hover:opacity-90 transition">Calculate Quote</button>
+        </div>
+        <div class="glass-dark rounded-xl p-5 ring-calc">
+          <div class="flex justify-between py-1.5 border-b border-white/5"><span class="text-cream/60">Material cost</span><span id="outMaterial">R 0</span></div>
+          <div class="flex justify-between py-1.5 border-b border-white/5"><span class="text-cream/60">Making charge</span><span id="outMaking">R 0</span></div>
+          <div class="flex justify-between py-1.5 border-b border-white/5"><span class="text-cream/60">Stone cost</span><span id="outStone">R 0</span></div>
+          <div class="flex justify-between py-1.5 border-b border-white/5"><span class="text-cream/60">Subtotal (cost)</span><span id="outSub">R 0</span></div>
+          <div class="flex justify-between py-1.5 border-b border-white/5"><span class="text-cream/60">Multiplier</span><span id="outMult">2.2×</span></div>
+          <div class="flex justify-between py-3 text-lg font-bold"><span class="text-gold">Estimated Retail</span><span id="outRetail" class="text-gold">R 0</span></div>
+          <div class="flex justify-between py-1.5"><span class="text-cream/60">Gross profit</span><span id="outProfit">R 0</span></div>
+          <p class="text-xs text-cream/40 mt-3">Illustrative. Always re-pull spot on the day of quoting. Add design/set/engrave/rhodium as separate lines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEBSITE MOCKUP -->
+<section id="mockup" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Website Mockup</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">The Proposed 6-Page Customer Site</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">What buyers see. Switch tabs to walk the proposed site.</p>
+    </div>
+    <div class="browser-frame" data-aos="fade-up">
+      <div class="browser-bar">
+        <span class="browser-dot bg-rose"></span>
+        <span class="browser-dot bg-yellow-400"></span>
+        <span class="browser-dot bg-green-400"></span>
+        <div class="flex-1 mx-4 bg-navy rounded-md px-3 py-1 text-xs text-cream/50">https://49yearmasterpiece.co.za</div>
+      </div>
+      <div class="bg-navy p-3 flex flex-wrap gap-2 border-b border-gold/10">
+        <button class="site-tab active tab-btn glass px-3 py-1.5 rounded-md text-xs" data-page="home">Home</button>
+        <button class="site-tab tab-btn glass px-3 py-1.5 rounded-md text-xs" data-page="shop">Shop</button>
+        <button class="site-tab tab-btn glass px-3 py-1.5 rounded-md text-xs" data-page="product">Product</button>
+        <button class="site-tab tab-btn glass px-3 py-1.5 rounded-md text-xs" data-page="about">About</button>
+        <button class="site-tab tab-btn glass px-3 py-1.5 rounded-md text-xs" data-page="custom">Custom &amp; Repairs</button>
+        <button class="site-tab tab-btn glass px-3 py-1.5 rounded-md text-xs" data-page="contact">Contact</button>
+      </div>
+      <div class="bg-navy min-h-[420px] p-6">
+        <div class="site-page" data-page="home">
+          <div class="text-center py-10">
+            <p class="text-gold text-xs uppercase tracking-[0.3em] mb-2">Home</p>
+            <h3 class="font-display text-3xl mb-3">49 Years of Handcrafted Jewellery in South Africa</h3>
+            <p class="text-cream/60 text-sm max-w-md mx-auto mb-6">Trust strip: 49 Years badge · Handcrafted in SA · Secure Checkout · Free delivery over R X. Featured pieces. WhatsApp CTA. Reviews carousel.</p>
+            <div class="flex justify-center gap-3">
+              <span class="glass px-4 py-2 rounded-full text-xs">Shop Now</span>
+              <span class="glass px-4 py-2 rounded-full text-xs">WhatsApp Consult</span>
+            </div>
+          </div>
+        </div>
+        <div class="site-page hidden" data-page="shop">
+          <p class="text-gold text-xs uppercase tracking-[0.3em] mb-2">Shop</p>
+          <h3 class="font-display text-2xl mb-4">Categories</h3>
+          <div class="grid grid-cols-3 gap-3 text-sm">
+            <div class="glass rounded-lg p-3 text-center">Rings</div>
+            <div class="glass rounded-lg p-3 text-center">Bracelets</div>
+            <div class="glass rounded-lg p-3 text-center">Earrings</div>
+            <div class="glass rounded-lg p-3 text-center">Necklaces</div>
+            <div class="glass rounded-lg p-3 text-center">Custom/Bespoke</div>
+            <div class="glass rounded-lg p-3 text-center">Repairs</div>
+          </div>
+          <p class="text-cream/50 text-xs mt-4">Filters · product cards with price, rating, "Ships in 2 days".</p>
+        </div>
+        <div class="site-page hidden" data-page="product">
+          <p class="text-gold text-xs uppercase tracking-[0.3em] mb-2">Product Page</p>
+          <h3 class="font-display text-2xl mb-3">Oval Moissanite Solitaire · 18k YG</h3>
+          <p class="text-cream/60 text-sm mb-4">Photos (incl. on-hand), materials, sizing guide, delivery promise, returns, reviews, "Ask on WhatsApp", Add to Cart.</p>
+          <div class="flex gap-3"><span class="glass px-4 py-2 rounded-full text-xs">Add to Cart</span><span class="glass px-4 py-2 rounded-full text-xs">Ask on WhatsApp</span></div>
+        </div>
+        <div class="site-page hidden" data-page="about">
+          <p class="text-gold text-xs uppercase tracking-[0.3em] mb-2">About / Our Story</p>
+          <h3 class="font-display text-2xl mb-3">49 Years at the Bench</h3>
+          <p class="text-cream/60 text-sm">Your journey, bench photo, "Handcrafted in South Africa", certifications, press/awards. The ethical commitments and supplier certificates live here.</p>
+        </div>
+        <div class="site-page hidden" data-page="custom">
+          <p class="text-gold text-xs uppercase tracking-[0.3em] mb-2">Custom &amp; Repairs</p>
+          <h3 class="font-display text-2xl mb-3">Bespoke Commission + Heirloom Redesign</h3>
+          <p class="text-cream/60 text-sm">Process, consultation booking, repair services, turnaround times, gallery of past commissions. Free first consultation; design fee credited to the piece.</p>
+        </div>
+        <div class="site-page hidden" data-page="contact">
+          <p class="text-gold text-xs uppercase tracking-[0.3em] mb-2">Contact</p>
+          <h3 class="font-display text-2xl mb-3">Talk to the Goldsmith</h3>
+          <p class="text-cream/60 text-sm">WhatsApp button (primary), phone, email, suburb/city + map, hours, FAQ (shipping, returns, sizing, care). Plus Cart/Checkout, Order Tracking, POPIA, Terms, Shipping, Returns (footer).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Marketing Roadmap</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">30-Day Launch Plan</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">60–90 minutes a day. From zero to a live, converting business.</p>
+    </div>
+    <div class="relative pl-10 space-y-6 mb-14">
+      <div class="timeline-line"></div>
+      <div class="relative" data-aos="fade-up">
+        <span class="absolute -left-10 top-1 w-5 h-5 rounded-full bg-gold border-4 border-navy"></span>
+        <h3 class="font-display text-xl mb-1">Week 1 — Foundations</h3>
+        <p class="text-sm text-cream/60">Brand name &amp; handle, one-line positioning, WhatsApp Business profile, IG/FB pages, GBP created, WhatsApp catalog (20 pieces), 15 photos + 5 videos, 30-caption bank, 5 past-client reviews.</p>
+      </div>
+      <div class="relative" data-aos="fade-up">
+        <span class="absolute -left-10 top-1 w-5 h-5 rounded-full bg-gold border-4 border-navy"></span>
+        <h3 class="font-display text-xl mb-1">Week 2 — Content Engine</h3>
+        <p class="text-sm text-cream/60">First Reels (process, heirloom story, education, before/after), TikTok, join 5 FB groups, outreach to 5 wedding planners, partner kits to salons.</p>
+      </div>
+      <div class="relative" data-aos="fade-up">
+        <span class="absolute -left-10 top-1 w-5 h-5 rounded-full bg-gold border-4 border-navy"></span>
+        <h3 class="font-display text-xl mb-1">Week 3 — Partnerships &amp; Paid</h3>
+        <p class="text-sm text-cream/60">Apply to craft markets &amp; bridal fairs, list on Pink Book/SA Weddings, Meta Ads R50/day, Google Search R100/day, mini open-studio, 5 creator gifting outreaches.</p>
+      </div>
+      <div class="relative" data-aos="fade-up">
+        <span class="absolute -left-10 top-1 w-5 h-5 rounded-full bg-gold border-4 border-navy"></span>
+        <h3 class="font-display text-xl mb-1">Week 4 — Scale &amp; Systemize</h3>
+        <p class="text-sm text-cream/60">Best-format Reel variation, +10 catalog items, first WhatsApp broadcast, 3 corporate gifting pitches, 3 video testimonials, GBP refresh, trunk show, SOPs, 90-day goals.</p>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up">
+        <i data-lucide="map-pin" class="w-7 h-7 text-gold mb-3"></i>
+        <h3 class="font-display text-xl mb-1">Google Business Profile</h3>
+        <p class="text-sm text-cream/60">SAB, service area, 30+ photos, weekly posts, review engine. The local SEO anchor.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="50">
+        <i data-lucide="instagram" class="w-7 h-7 text-gold mb-3"></i>
+        <h3 class="font-display text-xl mb-1">Instagram / Facebook</h3>
+        <p class="text-sm text-cream/60">4 content pillars, Reels as reach engine, 8–12 hashtags, Meta Catalogue sync.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <i data-lucide="video" class="w-7 h-7 text-gold mb-3"></i>
+        <h3 class="font-display text-xl mb-1">TikTok</h3>
+        <p class="text-sm text-cream/60">Process content: forging, setting, polishing. Behind-the-bench builds trust.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="150">
+        <i data-lucide="message-circle" class="w-7 h-7 text-gold mb-3"></i>
+        <h3 class="font-display text-xl mb-1">WhatsApp Business</h3>
+        <p class="text-sm text-cream/60">Catalog (500 items), quick replies, labels, broadcasts, Status. The closer.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="200">
+        <i data-lucide="users" class="w-7 h-7 text-gold mb-3"></i>
+        <h3 class="font-display text-xl mb-1">Referral Networks</h3>
+        <p class="text-sm text-cream/60">Wedding planners, salons, boutiques, interior designers. 10–15% commission.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="250">
+        <i data-lucide="megaphone" class="w-7 h-7 text-gold mb-3"></i>
+        <h3 class="font-display text-xl mb-1">Paid Ads</h3>
+        <p class="text-sm text-cream/60">Meta R50/day test + Google Search R100/day. Scale winners by 20%.</p>
+      </div>
+    </div>
+    <div class="mt-10 glass rounded-2xl p-6" data-aos="fade-up">
+      <h3 class="font-display text-xl mb-3">Month-1 Targets</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        <div><span class="text-gold font-bold">16–20</span> Reels</div>
+        <div><span class="text-gold font-bold">8–12</span> TikToks</div>
+        <div><span class="text-gold font-bold">40+</span> catalog items</div>
+        <div><span class="text-gold font-bold">10+</span> Google reviews</div>
+        <div><span class="text-gold font-bold">5+</span> partner meetings</div>
+        <div><span class="text-gold font-bold">R3k–6k</span> ad spend</div>
+        <div><span class="text-gold font-bold">&lt;R200</span> cost/lead (Meta)</div>
+        <div><span class="text-gold font-bold">Track</span> via codes + "how found us"</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT PILLARS -->
+<section id="content" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Content Engine</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Four Content Pillars</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up"><i data-lucide="hammer" class="w-7 h-7 text-gold mb-3"></i><h3 class="font-display text-xl mb-1">Process</h3><p class="text-sm text-cream/60">Forging, setting, polishing. Behind-the-bench builds trust.</p></div>
+      <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="50"><i data-lucide="book-open" class="w-7 h-7 text-gold mb-3"></i><h3 class="font-display text-xl mb-1">Heirloom Stories</h3><p class="text-sm text-cream/60">Before/after redesigns. The emotional hook.</p></div>
+      <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="100"><i data-lucide="graduation-cap" class="w-7 h-7 text-gold mb-3"></i><h3 class="font-display text-xl mb-1">Education</h3><p class="text-sm text-cream/60">Jewellery care, metal guides, sizing. Authority content.</p></div>
+      <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="150"><i data-lucide="heart" class="w-7 h-7 text-gold mb-3"></i><h3 class="font-display text-xl mb-1">Client Reveals</h3><p class="text-sm text-cream/60">Delivery moments. Social proof that converts.</p></div>
+    </div>
+  </div>
+</section>
+<section id="plan30" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">30-Day Detailed Plan</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Day by Day. 60–90 Minutes.</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 text-sm">
+      <div class="glass rounded-2xl p-6" data-aos="fade-up">
+        <h3 class="font-display text-xl mb-3 text-gold">Week 1 — Foundations</h3>
+        <ul class="space-y-1.5 text-cream/70">
+          <li><strong class="text-cream">Day 1:</strong> Brand name, handle, one-line positioning; WhatsApp Business profile.</li>
+          <li><strong class="text-cream">Day 2:</strong> IG + FB pages; bios; highlights covers.</li>
+          <li><strong class="text-cream">Day 3:</strong> Google Business Profile (SAB, service area); start verification.</li>
+          <li><strong class="text-cream">Day 4:</strong> WhatsApp catalog (first 20 pieces).</li>
+          <li><strong class="text-cream">Day 5:</strong> Shoot 15 photos + 5 short videos.</li>
+          <li><strong class="text-cream">Day 6:</strong> Write 30 captions; plan hashtag sets.</li>
+          <li><strong class="text-cream">Day 7:</strong> GBP verification; ask 5 past clients for reviews.</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="50">
+        <h3 class="font-display text-xl mb-3 text-gold">Week 2 — Content Engine</h3>
+        <ul class="space-y-1.5 text-cream/70">
+          <li><strong class="text-cream">Day 8:</strong> First Reel (process) + FB cross-post + Status.</li>
+          <li><strong class="text-cream">Day 9:</strong> Reel (heirloom story) + 3 photos; join 5 FB groups.</li>
+          <li><strong class="text-cream">Day 10:</strong> Reel (education); outreach to 5 wedding planners.</li>
+          <li><strong class="text-cream">Day 11:</strong> First TikTok; reply to comments/DMs within 1 hour.</li>
+          <li><strong class="text-cream">Day 12:</strong> Reel (before/after repair); partner kit to 2 salons.</li>
+          <li><strong class="text-cream">Day 13:</strong> FB group value post; Status ×2.</li>
+          <li><strong class="text-cream">Day 14:</strong> Weekly review: top format; plan next week.</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-display text-xl mb-3 text-gold">Week 3 — Partnerships &amp; Paid</h3>
+        <ul class="space-y-1.5 text-cream/70">
+          <li><strong class="text-cream">Day 15:</strong> Apply to 2 craft markets.</li>
+          <li><strong class="text-cream">Day 16:</strong> Apply to 1 bridal fair; list on Pink Book/SA Weddings.</li>
+          <li><strong class="text-cream">Day 17:</strong> Meta Ads: 1 ad set, R50/day, WhatsApp objective, 3 creatives.</li>
+          <li><strong class="text-cream">Day 18:</strong> Google Search Ads: R100/day, 5 keywords, 3 variations.</li>
+          <li><strong class="text-cream">Day 19:</strong> Reel (49-years lesson); outreach to 5 creators.</li>
+          <li><strong class="text-cream">Day 20:</strong> Mini open-studio (5 past clients + 2 partners).</li>
+          <li><strong class="text-cream">Day 21:</strong> Weekly review: spend, leads, CPL; pause losers.</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="font-display text-xl mb-3 text-gold">Week 4 — Scale &amp; Systemize</h3>
+        <ul class="space-y-1.5 text-cream/70">
+          <li><strong class="text-cream">Day 22:</strong> Best Reel format variation; +10 catalog items.</li>
+          <li><strong class="text-cream">Day 23:</strong> First WhatsApp broadcast (value + new piece).</li>
+          <li><strong class="text-cream">Day 24:</strong> TikTok + IG Reel; pitch 3 corporate gifting prospects.</li>
+          <li><strong class="text-cream">Day 25:</strong> Collect 3 video testimonials.</li>
+          <li><strong class="text-cream">Day 26:</strong> Refresh GBP: new photos, Google Post, reply to reviews.</li>
+          <li><strong class="text-cream">Day 27:</strong> Co-host trunk show with bridal boutique.</li>
+          <li><strong class="text-cream">Day 28:</strong> Month review: revenue, leads, top channel/content/partner.</li>
+          <li><strong class="text-cream">Day 29:</strong> Scale: +20% ad budget on winner; book next market.</li>
+          <li><strong class="text-cream">Day 30:</strong> Document SOPs; set 90-day goals.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="priority" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Priority Build Order</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Top 10 SKUs to Craft First</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">Ranked by demand strength × craftsman advantage × margin × SA fit.</p>
+    </div>
+    <div class="overflow-x-auto glass rounded-2xl" data-aos="fade-up">
+      <table class="w-full text-sm">
+        <thead><tr class="text-gold border-b border-gold/20"><th class="text-left py-3 px-4">#</th><th class="text-left py-3 px-4">SKU</th><th class="text-left py-3 px-4">Why</th><th class="text-left py-3 px-4">Price Band (ZAR)</th></tr></thead>
+        <tbody class="text-cream/80">
+          <tr class="border-b border-white/5"><td class="px-4 py-2">1</td><td class="px-4 py-2 font-semibold">Bespoke yellow-gold engagement ring (oval/pear moissanite)</td><td class="px-4 py-2">Highest demand, margin, core craft, bridal season</td><td class="px-4 py-2">15,000–60,000</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">2</td><td class="px-4 py-2 font-semibold">Custom name/initial pendant necklace</td><td class="px-4 py-2">Top social trend, gifting staple, personalization premium</td><td class="px-4 py-2">800–4,500</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">3</td><td class="px-4 py-2 font-semibold">Stacking ring set (slim bands + signet/dome)</td><td class="px-4 py-2">Repeat purchase, low material, quick to make</td><td class="px-4 py-2">600–3,500/set</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">4</td><td class="px-4 py-2 font-semibold">Hand-made charm bracelet (custom motifs)</td><td class="px-4 py-2">Meaning-driven, craft story, gifting</td><td class="px-4 py-2">1,200–6,000</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">5</td><td class="px-4 py-2 font-semibold">Signet/pinky ring (monogrammable)</td><td class="px-4 py-2">Men's trend rising, vintage roots</td><td class="px-4 py-2">1,500–8,000</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">6</td><td class="px-4 py-2 font-semibold">Sculptural silver cuff / statement earrings</td><td class="px-4 py-2">Trending silver, affordable, high perceived value</td><td class="px-4 py-2">1,200–5,000</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">7</td><td class="px-4 py-2 font-semibold">Bombé/dome ring (colorful gemstone)</td><td class="px-4 py-2">Rising trend, sculptural, IG-friendly</td><td class="px-4 py-2">3,500–12,000</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">8</td><td class="px-4 py-2 font-semibold">Fairmined gold wedding band (hand-finished)</td><td class="px-4 py-2">Ethical premium, bridal, SA gold heritage</td><td class="px-4 py-2">8,000–25,000</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">9</td><td class="px-4 py-2 font-semibold">Brooch (vintage/heirloom style)</td><td class="px-4 py-2">Rising fast (+110% Pinterest), men's adoption</td><td class="px-4 py-2">2,000–9,000</td></tr>
+          <tr><td class="px-4 py-2">10</td><td class="px-4 py-2 font-semibold">Pearl &amp; mixed-metal pendant (modern rework)</td><td class="px-4 py-2">Classic reimagined, Mother's Day gifting</td><td class="px-4 py-2">900–4,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-cream/40 mt-3 text-center">Avoid: mass-produced beaded/Y2K pieces, titanium piercing (machining), heavy ornate traditional sets (declining in SA).</p>
+  </div>
+</section>
+
+<!-- COMPETITIVE LANDSCAPE -->
+<section id="competitive" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Competitive Landscape</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">A Fragmented Field. A Clear Gap.</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">Hundreds of independents vs a handful of chains. Made-to-order is the dominant profitable model for independents.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+      <div class="glass rounded-xl p-5" data-aos="fade-up"><p class="text-gold font-semibold mb-1">Cape Town</p><p class="text-cream/60">Prins & Prins (1982), Uwe Koetter, Mark Solomon, Shimansky, Famke, Dear Rae, Janine Binneman, Olga (43 yrs), Carlize Bam, ANPA.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="50"><p class="text-gold font-semibold mb-1">Johannesburg</p><p class="text-cream/60">Martin Nagel (remodeling), Jenna Clifford (70 artisans, 1992), Cavendier (17+ yrs), Nqobile Nkosi (Soweto), Crimson Diamonds, RichWJ casting.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="100"><p class="text-gold font-semibold mb-1">Durban</p><p class="text-cream/60">Keepsakes (1989), Silvery (personalized name, national), Colourise Studio, Kelly Jay (Hilton).</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="150"><p class="text-gold font-semibold mb-1">Pretoria</p><p class="text-cream/60">Blink Juwele (2004), Your Diamonds (1986), Manser Jewellery.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="200"><p class="text-gold font-semibold mb-1">National Chains</p><p class="text-cream/60">American Swiss, Sterns, NWJ, Arthur Kaplan, Shimansky, Browns, Miglio.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="250"><p class="text-gold font-semibold mb-1">Dad's Positioning</p><p class="text-cream/60">Below chain retail (no mall rent), above scrap + skill. 49-year credibility, heirloom redesign nobody can credibly match, direct-to-client via WhatsApp.</p></div>
+    </div>
+  </div>
+</section>
+<section id="risk" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Risk &amp; Compliance</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Built to Survive Audits</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="glass rounded-2xl p-6" data-aos="fade-up">
+        <h3 class="font-display text-xl mb-3">Legal (South Africa)</h3>
+        <ul class="space-y-2 text-sm text-cream/70">
+          <li>• Register business (CIPC + SARS); confirm VAT threshold &amp; invoicing rules.</li>
+          <li>• Obtain jeweller's permit + JCSA accreditation; register hallmark/maker's mark.</li>
+          <li>• Precious metals compliance; consumer protection (CPA) on returns/warranties.</li>
+          <li>• Insurance (studio, tools, stock, transit); home-based zoning check.</li>
+          <li>• POPIA privacy policy, terms, shipping &amp; returns on the site.</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-display text-xl mb-3">Risk Mitigation</h3>
+        <ul class="space-y-2 text-sm text-cream/70">
+          <li>• Outsource casting; do NOT buy a casting kit until volume justifies.</li>
+          <li>• No pavé/micro-pavé until microscope + advanced setting training.</li>
+          <li>• No platinum fabrication until dedicated tool set &amp; torch upgrade.</li>
+          <li>• 50% deposit on bespoke; signed commission agreement; 2 revisions max in writing.</li>
+          <li>• Re-quote spot on the day of fabrication; add 3–5% currency buffer.</li>
+          <li>• Heirloom intake: identification/appraisal before quoting; written consent.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-24">
+  <div class="max-w-3xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">FAQ</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">Questions, Answered</h2>
+    </div>
+    <div class="space-y-4" data-aos="fade-up">
+      <details class="glass rounded-2xl p-5">
+        <summary class="font-display text-lg cursor-pointer">How long does a bespoke ring take?</summary>
+        <p class="text-sm text-cream/60 mt-3">Typically 3–6 weeks from approved CAD render, including stone sourcing, fabrication, setting and QC.</p>
+      </details>
+      <details class="glass rounded-2xl p-5">
+        <summary class="font-display text-lg cursor-pointer">Do you work with client-supplied gold?</summary>
+        <p class="text-sm text-cream/60 mt-3">Yes. Heirloom redesign is a signature service — we melt, refine and re-alloy your gold, with a provenance card documenting origin.</p>
+      </details>
+      <details class="glass rounded-2xl p-5">
+        <summary class="font-display text-lg cursor-pointer">Are your stones certified?</summary>
+        <p class="text-sm text-cream/60 mt-3">We use GIA/EGL-certified natural diamonds and lab-grown stones, plus moissanite and certified cabochons. Certificates supplied on request.</p>
+      </details>
+      <details class="glass rounded-2xl p-5">
+        <summary class="font-display text-lg cursor-pointer">What is the deposit policy?</summary>
+        <p class="text-sm text-cream/60 mt-3">50% deposit on approval of the CAD render, balance on delivery. Design fee credited to the final piece.</p>
+      </details>
+      <details class="glass rounded-2xl p-5">
+        <summary class="font-display text-lg cursor-pointer">Do you ship nationwide?</summary>
+        <p class="text-sm text-cream/60 mt-3">Yes — tracked, insured courier. International shipping (DHL/FedEx) available on request.</p>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="offline" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Offline</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Markets, Fairs &amp; Pop-Ups</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="glass rounded-2xl p-6" data-aos="fade-up">
+        <h3 class="font-display text-xl mb-3">Craft Markets</h3>
+        <p class="text-sm text-cream/70">Kamers, Linden, Bay Harbour, Neighbourgoods. Apply early; bring partner kit &amp; QR codes.</p>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-display text-xl mb-3">Bridal Fairs</h3>
+        <p class="text-sm text-cream/70">Oakfield, Cape Town Winter, Say I Do. Engagement-ring anchor; 10–15% planner commission.</p>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="font-display text-xl mb-3">Pop-Ups &amp; Open Studio</h3>
+        <p class="text-sm text-cream/70">Mini open-studio for 5 past clients + 2 partners; trunk show with bridal boutique.</p>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="250">
+        <h3 class="font-display text-xl mb-3">Corporate Gifting</h3>
+        <p class="text-sm text-cream/70">Pitch 3–5 corporate prospects for Dec season; engraved pieces, provenance cards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="services" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Service Tiers</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Heirloom &amp; Bespoke Pricing</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 mb-8">
+      <div class="glass rounded-2xl p-7" data-aos="fade-up">
+        <h3 class="font-display text-2xl mb-4">Heirloom Redesign</h3>
+        <div class="space-y-3 text-sm">
+          <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-cream/70">Refresh</span><span class="text-gold font-semibold">R 1,500 – 3,500</span></div>
+          <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-cream/70">Restyle</span><span class="text-gold font-semibold">R 4,000 – 9,000</span></div>
+          <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-cream/70">Full Transformation</span><span class="text-gold font-semibold">R 10,000 – 25,000+</span></div>
+        </div>
+        <p class="text-xs text-cream/40 mt-3">Client supplies gold + stones. Melt, refine, re-alloy. Provenance card included.</p>
+      </div>
+      <div class="glass rounded-2xl p-7" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-display text-2xl mb-4">Bespoke Engagement Ring (indicative)</h3>
+        <div class="space-y-3 text-sm">
+          <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-cream/70">Silver + CZ</span><span class="text-gold font-semibold">R 2,500 – 4,500</span></div>
+          <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-cream/70">9k + moissanite</span><span class="text-gold font-semibold">R 8,000 – 18,000</span></div>
+          <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-cream/70">18k + lab diamond</span><span class="text-gold font-semibold">R 15,000 – 40,000</span></div>
+          <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-cream/70">18k + natural diamond</span><span class="text-gold font-semibold">R 25,000 – 80,000+</span></div>
+        </div>
+        <p class="text-xs text-cream/40 mt-3">50% deposit on CAD approval. Design fee credited to the piece.</p>
+      </div>
+    </div>
+    <div class="glass rounded-2xl p-7" data-aos="fade-up">
+      <h3 class="font-display text-xl mb-3">Certification Ladder (Ethical)</h3>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 text-sm text-cream/70">
+        <div class="glass-dark rounded-lg p-3">1. Provenance cards (no cert)</div>
+        <div class="glass-dark rounded-lg p-3">2. Recycled-metal audit</div>
+        <div class="glass-dark rounded-lg p-3">3. GIA/EGL stones only</div>
+        <div class="glass-dark rounded-lg p-3">4. RJC micro-enterprise</div>
+        <div class="glass-dark rounded-lg p-3">5. Fairmined licensee</div>
+        <div class="glass-dark rounded-lg p-3">6. RJC Code of Practices</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="influencer" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Influencers</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Nano &amp; Micro Creators</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">Identify 30 creators (lifestyle, bridal, fashion, mom). Gift pieces, track via codes.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+      <div class="glass rounded-xl p-5" data-aos="fade-up"><p class="text-gold font-semibold">Nano (1k–10k)</p><p class="text-cream/60">R 500 – 2,000 per post; gifting primary.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="50"><p class="text-gold font-semibold">Micro (10k–50k)</p><p class="text-cream/60">R 2,000 – 8,000 per post; affiliate codes.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="100"><p class="text-gold font-semibold">Mid (50k–200k)</p><p class="text-cream/60">R 8,000 – 25,000; campaign-based.</p></div>
+    </div>
+  </div>
+</section>
+<section id="ethical" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Ethical &amp; Bespoke</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Heritage + Honesty</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">A craftsman whose default practice — handmade, durable, repairable — already is sustainability.</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-8">
+      <div class="glass rounded-2xl p-7" data-aos="fade-up">
+        <h3 class="font-display text-2xl mb-4 flex items-center gap-2"><i data-lucide="leaf" class="w-6 h-6 text-gold"></i> Ethical Sourcing Story</h3>
+        <ul class="space-y-3 text-sm text-cream/70">
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5"></i><span><strong class="text-cream">Craft as sustainability</strong> — handmade, repairable, remodellable; buy once, wear forever; anti-fast-fashion.</span></li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5"></i><span><strong class="text-cream">Provenance</strong> — "I know where every gram of gold and every stone came from." Provenance card in every box.</span></li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5"></i><span><strong class="text-cream">Heirloom</strong> — pieces designed to outlive trends; family stories embedded in metal.</span></li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5"></i><span><strong class="text-cream">Local</strong> — made in South Africa, by a South African hand, supporting local craft.</span></li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5"></i><span><strong class="text-cream">Transparency</strong> — show the bench, the suppliers, the certificates. "Ask me anything."</span></li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-gold mt-0.5"></i><span><strong class="text-cream">Repair &amp; reuse</strong> — remodel inherited jewellery; recycle client gold. The most authentic circular claim.</span></li>
+        </ul>
+        <p class="text-xs text-cream/40 mt-4">Certification ladder: provenance cards → recycled-metal audit → GIA/EGL stones only → RJC micro-enterprise → Fairmined licensee → RJC CoP. Disclose what is not yet certified.</p>
+      </div>
+      <div class="glass rounded-2xl p-7" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-display text-2xl mb-4 flex items-center gap-2"><i data-lucide="ring" class="w-6 h-6 text-gold"></i> Bespoke Commission Journey (9 Steps)</h3>
+        <ol class="space-y-2.5 text-sm text-cream/70 list-decimal list-inside">
+          <li><strong class="text-cream">Discovery / Lead</strong> — IG/FB/WhatsApp/referral; client shares inspiration + budget.</li>
+          <li><strong class="text-cream">Consultation (free, 45–90 min)</strong> — in person or video; story, budget, metal, stones, lifestyle, timeline; inspect heirlooms.</li>
+          <li><strong class="text-cream">Stone sourcing</strong> — present certified options (natural/lab-grown/moissanite); client selects.</li>
+          <li><strong class="text-cream">Design</strong> — hand sketches → CAD render → 3D images; 2 revisions included.</li>
+          <li><strong class="text-cream">Approval + deposit</strong> — approve render, sign commission agreement, 50% deposit.</li>
+          <li><strong class="text-cream">Fabrication</strong> — wax/CAM → casting → setting → finishing; heirloom: melt, refine, re-alloy.</li>
+          <li><strong class="text-cream">Quality check</strong> — setting security, polish, sizing, engraving.</li>
+          <li><strong class="text-cream">Delivery / presentation</strong> — in-person handover or tracked insured courier; reveal moment.</li>
+          <li><strong class="text-cream">Aftercare</strong> — free first resize, cleaning, polishing, setting warranty. Repeat client.</li>
+        </ol>
+        <p class="text-xs text-cream/40 mt-4">Consultation is the sale. CAD approval is the risk gate. Heirloom intake needs appraisal before quoting. Remote clients via WhatsApp video — standard now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDIO SETUP -->
+<section id="studio" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Studio Setup</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Fabrication-First Bench</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">R 25k–R 60k if buying new; far less if reusing existing tools. No casting kit.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="glass rounded-2xl p-6" data-aos="fade-up">
+        <h3 class="font-display text-xl mb-3">Bench &amp; Tools</h3>
+        <ul class="space-y-2 text-sm text-cream/70">
+          <li>• Bench, pin, mandrels, files, saws, torch (propane/oxy).</li>
+          <li>• Flex shaft, polishing motor, fume extraction.</li>
+          <li>• Soldering, forming, setting tools.</li>
+          <li>• Photography: light box, macro lens, consistent backgrounds.</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-display text-xl mb-3">Suppliers (SA)</h3>
+        <ul class="space-y-2 text-sm text-cream/70">
+          <li>• MetCon — grain/sheet, 999.9 refining.</li>
+          <li>• Rand Refinery — VAP products, Krugerrands.</li>
+          <li>• Gold Reef City Mint — Jewellery Council directory.</li>
+          <li>• Mr K — precious metals dealer (branches).</li>
+          <li>• Jewellery Council of SA — setters, engravers, suppliers.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="ops" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Operations</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Payments &amp; Shipping (SA)</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="glass rounded-2xl p-6" data-aos="fade-up">
+        <h3 class="font-display text-xl mb-3">Payments</h3>
+        <ul class="space-y-2 text-sm text-cream/70">
+          <li>• PayFast (card, EFT, SnapScan, Zapper) — primary gateway.</li>
+          <li>• Yoco / Ozow as additional methods.</li>
+          <li>• EFT with 50% deposit on bespoke; balance on delivery.</li>
+          <li>• BNPL (Mobicred/MoreTyme) for pieces &gt; R1,000 (growth).</li>
+          <li>• Meta Catalogue sync for WhatsApp shopping.</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-display text-xl mb-3">Shipping</h3>
+        <ul class="space-y-2 text-sm text-cream/70">
+          <li>• Bob Go / courier accounts; zones + rates at checkout.</li>
+          <li>• Tracked, insured delivery; free delivery over threshold.</li>
+          <li>• International (DHL/FedEx) + multi-currency (growth).</li>
+          <li>• In-person handover for bespoke reveals.</li>
+          <li>• Review request flow: email + WhatsApp + QR on packaging.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="kpi" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">KPIs</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Metrics to Track Weekly</h2>
+    </div>
+    <div class="overflow-x-auto glass rounded-2xl" data-aos="fade-up">
+      <table class="w-full text-sm">
+        <thead><tr class="text-gold border-b border-gold/20"><th class="text-left py-3 px-4">Metric</th><th class="text-left py-3 px-4">Month-1 Target</th></tr></thead>
+        <tbody class="text-cream/80">
+          <tr class="border-b border-white/5"><td class="px-4 py-2">Reels posted</td><td class="px-4 py-2">16–20</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">TikToks posted</td><td class="px-4 py-2">8–12</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">WhatsApp catalog items</td><td class="px-4 py-2">40+</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">Google reviews</td><td class="px-4 py-2">10+</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">Partner meetings</td><td class="px-4 py-2">5+</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">Ad spend</td><td class="px-4 py-2">R 3,000 – 6,000</td></tr>
+          <tr class="border-b border-white/5"><td class="px-4 py-2">Cost per WhatsApp lead (Meta)</td><td class="px-4 py-2">&lt; R 200</td></tr>
+          <tr><td class="px-4 py-2">Cost per lead (Google)</td><td class="px-4 py-2">&lt; R 400</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section id="launch" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Launch Checklist</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Pre-Launch to Post-Launch</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 text-sm">
+      <div class="glass rounded-2xl p-6" data-aos="fade-up">
+        <h3 class="font-display text-xl mb-3">Pre-Launch (Weeks 1–2)</h3>
+        <ul class="space-y-1.5 text-cream/70">
+          <li>• Choose platform; register domain (.co.za/.com).</li>
+          <li>• Open PayFast; complete KYC; test sandbox.</li>
+          <li>• Set up Bob Go/courier; zones + rates.</li>
+          <li>• Install SSL; mobile speed &lt;2.5s.</li>
+          <li>• Create GBP; upload 30+ photos; verify.</li>
+          <li>• NAP citations (Yelp SA, Yellow Pages, Hotfrog, Cylex, SAJC).</li>
+          <li>• Install LocalBusiness + Product schema.</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-display text-xl mb-3">Content (Weeks 2–3)</h3>
+        <ul class="space-y-1.5 text-cream/70">
+          <li>• Photograph every piece (white bg + lifestyle); compress.</li>
+          <li>• Write product descriptions (materials, dims, care, delivery).</li>
+          <li>• Create "49 Years" badge; "Handcrafted in SA" label.</li>
+          <li>• Draft returns/shipping/privacy (POPIA) policies.</li>
+          <li>• Seed FAQ page.</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="font-display text-xl mb-3">Trust &amp; Conversion (Week 3)</h3>
+        <ul class="space-y-1.5 text-cream/70">
+          <li>• WhatsApp Business number + quick replies + catalogue.</li>
+          <li>• Trust signals at decision points.</li>
+          <li>• Review request flow (email + WhatsApp + QR on packaging).</li>
+          <li>• Meta Pixel + GA; conversion tracking.</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-6" data-aos="fade-up" data-aos-delay="250">
+        <h3 class="font-display text-xl mb-3">Launch (Week 4) &amp; Post</h3>
+        <ul class="space-y-1.5 text-cream/70">
+          <li>• 3–5 test orders end-to-end (card, EFT, mobile, desktop).</li>
+          <li>• Test label generation + tracking email.</li>
+          <li>• Soft launch to existing customers for first reviews.</li>
+          <li>• Announce on IG/FB/TikTok with link + QR.</li>
+          <li>• Submit sitemap to Search Console.</li>
+          <li>• Ongoing: respond to reviews in 48h; 1–2 blogs/month; monthly PayFast withdraw; quarterly citation audit.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="kanban" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Kanban Progress</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">180 Actions. Tracked.</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">Aggregated from research reports 01–09. Full board: <a href="../kanban.html" class="text-gold underline">kanban.html</a>.</p>
+    </div>
+    <div class="glass rounded-2xl p-7 mb-8" data-aos="fade-up">
+      <div class="flex justify-between text-sm mb-2"><span>Total progress</span><span id="kanbanTotal" class="text-gold font-bold">0 / 180</span></div>
+      <div class="progress-bar"><div id="kanbanProgress" class="progress-fill" style="width:0%"></div></div>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div class="glass rounded-2xl p-5 kanban-col" data-aos="fade-up">
+        <p class="text-xs uppercase tracking-widest text-cream/50 mb-1">Backlog</p>
+        <div class="font-display text-4xl text-cream/70" id="kBacklog">0</div>
+        <div class="progress-bar mt-3"><div id="kBacklogBar" class="progress-fill" style="width:0%"></div></div>
+      </div>
+      <div class="glass rounded-2xl p-5 kanban-col" data-aos="fade-up" data-aos-delay="50">
+        <p class="text-xs uppercase tracking-widest text-cream/50 mb-1">To Do</p>
+        <div class="font-display text-4xl text-cream/70" id="kTodo">0</div>
+        <div class="progress-bar mt-3"><div id="kTodoBar" class="progress-fill" style="width:0%"></div></div>
+      </div>
+      <div class="glass rounded-2xl p-5 kanban-col" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-xs uppercase tracking-widest text-cream/50 mb-1">In Progress</p>
+        <div class="font-display text-4xl text-gold" id="kInProgress">0</div>
+        <div class="progress-bar mt-3"><div id="kInProgressBar" class="progress-fill" style="width:0%"></div></div>
+      </div>
+      <div class="glass rounded-2xl p-5 kanban-col" data-aos="fade-up" data-aos-delay="150">
+        <p class="text-xs uppercase tracking-widest text-cream/50 mb-1">Review</p>
+        <div class="font-display text-4xl text-cream/70" id="kReview">0</div>
+        <div class="progress-bar mt-3"><div id="kReviewBar" class="progress-fill" style="width:0%"></div></div>
+      </div>
+      <div class="glass rounded-2xl p-5 kanban-col" data-aos="fade-up" data-aos-delay="200">
+        <p class="text-xs uppercase tracking-widest text-cream/50 mb-1">Done</p>
+        <div class="font-display text-4xl text-green-400" id="kDone">0</div>
+        <div class="progress-bar mt-3"><div id="kDoneBar" class="progress-fill" style="width:0%"></div></div>
+      </div>
+    </div>
+    <p class="text-center text-cream/50 text-sm mt-6">Research reports: <a href="../research/01_local_commerce_sa.md" class="text-gold hover:underline">01</a> · <a href="../research/02_trending_products.md" class="text-gold hover:underline">02</a> · <a href="../research/03_craftable_pieces.md" class="text-gold hover:underline">03</a> · <a href="../research/04_pricing_gold_rates.md" class="text-gold hover:underline">04</a> · <a href="../research/05_website_ecommerce.md" class="text-gold hover:underline">05</a> · <a href="../research/06_marketing_channels.md" class="text-gold hover:underline">06</a> · <a href="../research/07_ethical_sustainable.md" class="text-gold hover:underline">07</a> · <a href="../research/08_bespoke_custom_market.md" class="text-gold hover:underline">08</a> · <a href="../research/09_youtube_insights.md" class="text-gold hover:underline">09</a></p>
+  </div>
+</section>
+
+<!-- SOUTH AFRICA JEWELRY CALENDAR -->
+<section id="jewelry-calendar" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Seasonal Demand</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">South Africa Jewelry Calendar</h2>
+      <p class="text-cream/60 max-w-2xl mx-auto">Plan your bench around the moments that matter most.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80&auto=format&fit=crop" alt="Valentine's Day jewellery" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-rose text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Feb</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-2">Valentine's Day</h3>
+          <p class="text-xs uppercase tracking-widest text-gold mb-2">Top sellers (last 5 yrs)</p>
+          <ul class="text-sm text-cream/60 space-y-1 mb-3">
+            <li>• Heart pendants</li>
+            <li>• Promise rings</li>
+            <li>• Stud earrings</li>
+            <li>• Name necklaces</li>
+          </ul>
+          <p class="text-xs text-cream/50 italic"><span class="text-gold not-italic font-semibold">Design idea:</span> Heart-cut bezel pendant in 9k gold with engraved initials.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="50">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80&auto=format&fit=crop" alt="Easter weddings autumn collections" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-gold text-navy text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Mar–Apr</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-2">Easter Weddings</h3>
+          <p class="text-xs uppercase tracking-widest text-gold mb-2">Top sellers (last 5 yrs)</p>
+          <ul class="text-sm text-cream/60 space-y-1 mb-3">
+            <li>• Wedding bands</li>
+            <li>• Bridesmaid gifts</li>
+            <li>• Autumn-toned gemstones</li>
+            <li>• Bridesmaid pendants</li>
+          </ul>
+          <p class="text-xs text-cream/50 italic"><span class="text-gold not-italic font-semibold">Design idea:</span> Mixed-metal stacking band set for the bridal party.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80&auto=format&fit=crop" alt="Mother's Day pearl pendants charms" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-rose text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">May</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-2">Mother's Day</h3>
+          <p class="text-xs uppercase tracking-widest text-gold mb-2">Top sellers (last 5 yrs)</p>
+          <ul class="text-sm text-cream/60 space-y-1 mb-3">
+            <li>• Pearl pendants</li>
+            <li>• Charm bracelets</li>
+            <li>• Initial necklaces</li>
+            <li>• Birthstone rings</li>
+          </ul>
+          <p class="text-xs text-cream/50 italic"><span class="text-gold not-italic font-semibold">Design idea:</span> Baroque pearl on fine chain with child's birthstone charm.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="150">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1589128777073-263566ae5e4d?w=600&q=80&auto=format&fit=crop" alt="Bridal season engagement rings" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-gold text-navy text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Jun–Aug</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-2">Bridal Season</h3>
+          <p class="text-xs uppercase tracking-widest text-gold mb-2">Top sellers (last 5 yrs)</p>
+          <ul class="text-sm text-cream/60 space-y-1 mb-3">
+            <li>• Engagement rings</li>
+            <li>• Wedding bands</li>
+            <li>• Heirloom redesigns</li>
+            <li>• Bridal sets</li>
+          </ul>
+          <p class="text-xs text-cream/50 italic"><span class="text-gold not-italic font-semibold">Design idea:</span> Oval moissanite solitaire in 18k yellow gold with hidden halo.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=600&q=80&auto=format&fit=crop" alt="Heritage Day local pride pieces" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Sep</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-2">Heritage Day</h3>
+          <p class="text-xs uppercase tracking-widest text-gold mb-2">Top sellers (last 5 yrs)</p>
+          <ul class="text-sm text-cream/60 space-y-1 mb-3">
+            <li>• Signet rings</li>
+            <li>• SA motif pendants</li>
+            <li>• Handmade chains</li>
+            <li>• Local pride pieces</li>
+          </ul>
+          <p class="text-xs text-cream/50 italic"><span class="text-gold not-italic font-semibold">Design idea:</span> Engraved signet with Protea motif in recycled gold.</p>
+        </div>
+      </article>
+      <article class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="250">
+        <div class="relative h-48 img-fallback">
+          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80&auto=format&fit=crop" alt="Festive gifting corporate gifts markets" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          <span class="absolute top-3 left-3 bg-navy text-gold text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider border border-gold/40">Nov–Dec</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl mb-2">Festive Gifting</h3>
+          <p class="text-xs uppercase tracking-widest text-gold mb-2">Top sellers (last 5 yrs)</p>
+          <ul class="text-sm text-cream/60 space-y-1 mb-3">
+            <li>• Corporate gifts</li>
+            <li>• Charm collections</li>
+            <li>• Gift sets</li>
+            <li>• Market specials</li>
+          </ul>
+          <p class="text-xs text-cream/50 italic"><span class="text-gold not-italic font-semibold">Design idea:</span> Engraved corporate gift set with provenance card.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FACEBOOK CATALOG -->
+<section id="facebook-catalog" class="py-24">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="glass rounded-3xl overflow-hidden card-hover grid md:grid-cols-2 gap-0" data-aos="fade-up">
+      <div class="relative h-64 md:h-full img-fallback">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=80&auto=format&fit=crop" alt="Gasnola's Jewellers catalog on Facebook" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+      </div>
+      <div class="p-8 flex flex-col justify-center">
+        <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Catalog</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Browse our full catalog &amp; latest pieces on Facebook</h2>
+        <p class="text-cream/70 text-sm mb-6">Ready-made pieces and new drops are posted there weekly. Follow along for fresh stock, behind-the-bench previews and market dates.</p>
+        <a href="https://www.facebook.com/profile.php?id=100063741120418" target="_blank" rel="noopener" class="inline-flex items-center gap-2 gold-gradient-bg text-navy font-bold px-7 py-3.5 rounded-full hover:scale-105 transition w-fit">
+          <i data-lucide="facebook" class="w-5 h-5"></i> Open Facebook Catalog
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SIGNALS -->
+<section id="trust" class="py-24 bg-navy-soft/40">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3">Trust</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">Signals That Convert</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+      <div class="glass rounded-xl p-5" data-aos="fade-up"><p class="text-gold font-semibold mb-1">49 Years Badge</p><p class="text-cream/60">Prominent on hero &amp; about.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="50"><p class="text-gold font-semibold mb-1">Handcrafted in SA</p><p class="text-cream/60">Label on every piece.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="100"><p class="text-gold font-semibold mb-1">Secure Checkout</p><p class="text-cream/60">PayFast SSL, POPIA compliant.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="150"><p class="text-gold font-semibold mb-1">Free Delivery</p><p class="text-cream/60">Over threshold; tracked &amp; insured.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="200"><p class="text-gold font-semibold mb-1">Google Reviews</p><p class="text-cream/60">10+ in month one.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="250"><p class="text-gold font-semibold mb-1">Provenance Card</p><p class="text-cream/60">In every box.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="300"><p class="text-gold font-semibold mb-1">WhatsApp CTA</p><p class="text-cream/60">Primary contact everywhere.</p></div>
+      <div class="glass rounded-xl p-5" data-aos="fade-up" data-aos-delay="350"><p class="text-gold font-semibold mb-1">Schema.org</p><p class="text-cream/60">LocalBusiness + Product + FAQ.</p></div>
+    </div>
+  </div>
+</section>
+<footer id="cta" class="py-24 text-center relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.15),transparent_70%)]"></div>
+  <div class="relative max-w-3xl mx-auto px-5">
+    <h2 class="font-display text-5xl md:text-7xl font-bold mb-4">Start Your Custom Piece</h2>
+    <p class="text-cream/70 mb-8 text-lg">One conversation with the goldsmith. Free consultation. No obligation.</p>
+    <a href="https://wa.me/27810426334?text=Hi%2C%20I%27d%20like%20to%20start%20a%20custom%20piece" class="inline-flex items-center gap-2 gold-gradient-bg text-navy font-bold px-9 py-4 rounded-full text-lg hover:scale-105 transition">
+      <i data-lucide="message-circle" class="w-6 h-6"></i> WhatsApp Consult
+    </a>
+    <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm text-cream/50">
+      <span class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +27 78 279 5726</span>
+      <span class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> studio@example.co.za</span>
+      <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> South Africa</span>
+    </div>
+    <div class="mt-8 flex justify-center gap-4 text-cream/40">
+      <i data-lucide="instagram" class="w-5 h-5"></i>
+      <a href="https://www.facebook.com/profile.php?id=100063741120418" target="_blank" rel="noopener" class="hover:text-gold transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+      <i data-lucide="youtube" class="w-5 h-5"></i>
+    </div>
+    <p class="text-cream/30 text-xs mt-10">© 2026 Gasnola's Jewellers · Handcrafted in South Africa · All prices illustrative, spot-dependent.</p>
+  </div>
+</footer>
+
+<script>
+// Mobile menu
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+// SKU data
+const skus = [
+  {id:1,name:'Classic Plain Band 3mm',metal:'gold',metalLabel:'9k Gold',weight:'3.0g',stone:'�',tech:'Fabricate',time:'0.75 hr',material:'R 2,414',labor:'R 375',retail:'R 6,136',profit:'R 3,347',img:'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&q=80&auto=format&fit=crop'},
+  {id:2,name:'Classic Plain Band 3mm',metal:'silver',metalLabel:'925 Silver',weight:'3.0g',stone:'�',tech:'Fabricate',time:'0.75 hr',material:'R 120',labor:'R 375',retail:'R 1,118',profit:'R 623',img:'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80&auto=format&fit=crop'},
+  {id:3,name:'Signet Ring (oval table)',metal:'gold',metalLabel:'9k Gold',weight:'5.0g',stone:'�',tech:'Fabricate + engrave',time:'3.5 hr',material:'R 4,023',labor:'R 1,750',retail:'R 12,699',profit:'R 6,926',img:'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&q=80&auto=format&fit=crop'},
+  {id:4,name:'Signet Ring (oval table)',metal:'silver',metalLabel:'925 Silver',weight:'5.0g',stone:'�',tech:'Fabricate + engrave',time:'3.0 hr',material:'R 200',labor:'R 1,500',retail:'R 3,850',profit:'R 2,150',img:'https://images.unsplash.com/photo-1589128777073-263566ae5e4d?w=400&q=80&auto=format&fit=crop'},
+  {id:5,name:'Initial Pendant (single letter)',metal:'gold',metalLabel:'9k Gold',weight:'1.5g',stone:'�',tech:'Pierce/saw',time:'1.5 hr',material:'R 1,207',labor:'R 750',retail:'R 4,303',profit:'R 2,346',img:'https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=400&q=80&auto=format&fit=crop'},
+  {id:6,name:'Initial Pendant (single letter)',metal:'silver',metalLabel:'925 Silver',weight:'1.5g',stone:'�',tech:'Pierce/saw',time:'1.25 hr',material:'R 60',labor:'R 625',retail:'R 1,573',profit:'R 888',img:'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80&auto=format&fit=crop'},
+  {id:7,name:'Name Necklace (4 letters)',metal:'gold',metalLabel:'9k Gold',weight:'2.5g',stone:'�',tech:'Pierce + chain',time:'2.5 hr',material:'R 2,011',labor:'R 1,250',retail:'R 7,172',profit:'R 3,911',img:'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=400&q=80&auto=format&fit=crop'},
+  {id:8,name:'Name Necklace (4 letters)',metal:'silver',metalLabel:'925 Silver',weight:'2.5g',stone:'�',tech:'Pierce + chain',time:'2.0 hr',material:'R 100',labor:'R 1,000',retail:'R 2,530',profit:'R 1,430',img:'https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=400&q=80&auto=format&fit=crop'},
+  {id:9,name:'Bezel Pendant (round cab)',metal:'gold',metalLabel:'9k Gold',weight:'2.0g',stone:'CZ/Cab R600',tech:'Bezel set',time:'2.5 hr',material:'R 1,609 + 600',labor:'R 1,250',retail:'R 7,822',profit:'R 4,363',img:'https://images.unsplash.com/photo-1608042314453-ae338d80c427?w=400&q=80&auto=format&fit=crop'},
+  {id:10,name:'Bezel Pendant (round cab)',metal:'silver',metalLabel:'925 Silver',weight:'2.0g',stone:'CZ/Cab R400',tech:'Bezel set',time:'2.0 hr',material:'R 80 + 400',labor:'R 1,000',retail:'R 3,292',profit:'R 1,812',img:'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&q=80&auto=format&fit=crop'},
+  {id:11,name:'Stud Earrings (pair)',metal:'gold',metalLabel:'9k Gold',weight:'1.2g',stone:'�',tech:'Fabricate',time:'1.5 hr',material:'R 965',labor:'R 750',retail:'R 3,774',profit:'R 2,059',img:'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=80&auto=format&fit=crop'},
+  {id:12,name:'Stud Earrings (pair)',metal:'silver',metalLabel:'925 Silver',weight:'1.2g',stone:'�',tech:'Fabricate',time:'1.25 hr',material:'R 48',labor:'R 625',retail:'R 1,539',profit:'R 866',img:'https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400&q=80&auto=format&fit=crop'},
+  {id:13,name:'Solid Bangle (open)',metal:'gold',metalLabel:'9k Gold',weight:'8.0g',stone:'�',tech:'Form + solder',time:'2.5 hr',material:'R 6,436',labor:'R 1,250',retail:'R 16,889',profit:'R 9,203',img:'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&q=80&auto=format&fit=crop'},
+  {id:14,name:'Solid Bangle (open)',metal:'silver',metalLabel:'925 Silver',weight:'8.0g',stone:'�',tech:'Form + solder',time:'2.0 hr',material:'R 320',labor:'R 1,000',retail:'R 3,036',profit:'R 1,716',img:'https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400&q=80&auto=format&fit=crop'},
+  {id:15,name:'Chain Repair (solder + polish)',metal:'mixed',metalLabel:'925/9k',weight:'0.0g',stone:'�',tech:'Repair',time:'0.5 hr',material:'R 0',labor:'R 250',retail:'R 650',profit:'R 400',img:'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&q=80&auto=format&fit=crop'}
+];
+
+function renderSkus(filter){
+  const grid = document.getElementById('skuGrid');
+  grid.innerHTML = '';
+  skus.filter(s => filter==='all' || s.metal===filter).forEach((s,i) => {
+    const el = document.createElement('div');
+    el.className = 'glass rounded-2xl p-5 card-hover';
+    el.setAttribute('data-aos','fade-up');
+    el.setAttribute('data-aos-delay', String((i%6)*50));
+    el.innerHTML = `
+      <div class="relative h-36 img-fallback mb-3 rounded-xl overflow-hidden">
+        <img src="${s.img}" alt="${s.name}" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+      </div>
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-[10px] uppercase tracking-widest text-gold">${s.metalLabel}</span>
+        <span class="text-[10px] text-cream/40">#${s.id}</span>
+      </div>
+      <h3 class="font-display text-lg mb-3">${s.name}</h3>
+      <div class="grid grid-cols-2 gap-y-1 text-xs text-cream/70">
+        <span>Weight</span><span class="text-right text-cream">${s.weight}</span>
+        <span>Stone</span><span class="text-right text-cream">${s.stone}</span>
+        <span>Technique</span><span class="text-right text-cream">${s.tech}</span>
+        <span>Bench time</span><span class="text-right text-cream">${s.time}</span>
+        <span>Material</span><span class="text-right text-cream">${s.material}</span>
+        <span>Labor</span><span class="text-right text-cream">${s.labor}</span>
+      </div>
+      <div class="flex items-center justify-between mt-4 pt-3 border-t border-gold/15">
+        <span class="text-xs text-cream/50">Retail</span>
+        <span class="font-bold text-gold">${s.retail}</span>
+      </div>
+      <div class="text-xs text-cream/40 mt-1">Profit ${s.profit}</div>
+    `;
+    grid.appendChild(el);
+  });
+  if (window.AOS) AOS.refresh();
+}
+renderSkus('all');
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderSkus(btn.dataset.filter);
+  });
+});
+
+// Site mockup tabs
+document.querySelectorAll('.site-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.site-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const page = tab.dataset.page;
+    document.querySelectorAll('.site-page').forEach(p => {
+      p.classList.toggle('hidden', p.dataset.page !== page);
+    });
+  });
+});
+
+// Calculator
+const spot = { '9k': 828.67, '18k': 1657.34, 'ag': 29.65 };
+const mult = { '9k': 2.2, '18k': 2.2, 'ag': 2.3 };
+// making per gram scaled: base values are for 9k; scale by metal
+function makingPerGram(base, metal){
+  if (metal === '9k') return base;
+  if (metal === '18k') return base * 1.5;
+  return Math.max(60, base * 0.4);
+}
+function calc(){
+  const metal = document.getElementById('calcMetal').value;
+  const w = parseFloat(document.getElementById('calcWeight').value) || 0;
+  const base = parseFloat(document.getElementById('calcComplex').value) || 0;
+  const stone = parseFloat(document.getElementById('calcStone').value) || 0;
+  const material = w * spot[metal] * 1.02;
+  const making = w * makingPerGram(base, metal);
+  const sub = material + making + stone;
+  const m = mult[metal];
+  const retail = (material + making) * m + stone * 1.5;
+  const profit = retail - sub;
+  const fmt = n => 'R ' + Math.round(n).toLocaleString('en-ZA');
+  document.getElementById('outMaterial').textContent = fmt(material);
+  document.getElementById('outMaking').textContent = fmt(making);
+  document.getElementById('outStone').textContent = fmt(stone);
+  document.getElementById('outSub').textContent = fmt(sub);
+  document.getElementById('outMult').textContent = m + '×';
+  document.getElementById('outRetail').textContent = fmt(retail);
+  document.getElementById('outProfit').textContent = fmt(profit);
+}
+document.getElementById('calcBtn').addEventListener('click', calc);
+['calcMetal','calcWeight','calcComplex','calcStone'].forEach(id => document.getElementById(id).addEventListener('input', calc));
+calc();
+
+// Kanban
+const kanban = { backlog:91, todo:55, inprogress:14, review:6, done:14 };
+const total = 180;
+function animateNum(el, target, suffix=''){
+  let cur = 0; const step = Math.max(1, Math.ceil(target/40));
+  const t = setInterval(() => { cur += step; if (cur >= target){ cur = target; clearInterval(t);} el.textContent = cur.toLocaleString() + suffix; }, 25);
+}
+setTimeout(() => {
+  animateNum(document.getElementById('kBacklog'), kanban.backlog);
+  animateNum(document.getElementById('kTodo'), kanban.todo);
+  animateNum(document.getElementById('kInProgress'), kanban.inprogress);
+  animateNum(document.getElementById('kReview'), kanban.review);
+  animateNum(document.getElementById('kDone'), kanban.done);
+  document.getElementById('kBacklogBar').style.width = (kanban.backlog/total*100) + '%';
+  document.getElementById('kTodoBar').style.width = (kanban.todo/total*100) + '%';
+  document.getElementById('kInProgressBar').style.width = (kanban.inprogress/total*100) + '%';
+  document.getElementById('kReviewBar').style.width = (kanban.review/total*100) + '%';
+  document.getElementById('kDoneBar').style.width = (kanban.done/total*100) + '%';
+  const donePct = (kanban.done/total*100);
+  document.getElementById('kanbanProgress').style.width = donePct + '%';
+  document.getElementById('kanbanTotal').textContent = kanban.done + ' / ' + total;
+}, 400);
+
+// Counters
+function animateCounters(){
+  document.querySelectorAll('.counter').forEach(el => {
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const isMoney = el.dataset.target === '1717';
+    let cur = 0; const steps = 60; const inc = target/steps;
+    const t = setInterval(() => {
+      cur += inc;
+      if (cur >= target){ cur = target; clearInterval(t); }
+      let val = Math.round(cur);
+      if (target === 1717) val = (cur).toFixed(0);
+      el.textContent = val.toLocaleString() + (isMoney ? 'M' : suffix);
+    }, 25);
+  });
+}
+
+// Particles
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let W, H, pts = [];
+function resize(){ W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+function initPts(){ pts = []; for (let i=0;i<90;i++){ pts.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.6+0.4,vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.3,a:Math.random()}); } }
+function drawPts(){
+  ctx.clearRect(0,0,W,H);
+  pts.forEach(p => {
+    p.x += p.vx; p.y += p.vy;
+    if (p.x<0||p.x>W) p.vx*=-1;
+    if (p.y<0||p.y>H) p.vy*=-1;
+    ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle = `rgba(212,175,55,${0.35+p.a*0.45})`; ctx.fill();
+  });
+  requestAnimationFrame(drawPts);
+}
+window.addEventListener('resize', () => { resize(); initPts(); });
+resize(); initPts(); drawPts();
+
+// AOS + GSAP
+AOS.init({ duration: 800, once: true, offset: 80 });
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('section').forEach(sec => {
+  gsap.fromTo(sec, { opacity: 0.92 }, { opacity: 1, duration: 0.6, scrollTrigger: { trigger: sec, start: 'top 90%' } });
+});
+// counter trigger
+ScrollTrigger.create({ trigger: '#vision', start: 'top 70%', onEnter: () => animateCounters(), once: true });
+
+if (window.lucide) lucide.createIcons();
+</script>
+</body>
+</html>

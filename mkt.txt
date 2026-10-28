@@ -1,0 +1,102 @@
+## 11. 30-Day Launch Plan (Daily Tasks)
+
+Assume starting from zero. Each day ≈ 60–90 min. Adjust to your capacity.
+
+### Week 1 — Foundations
+- **Day 1:** Define brand name, handle, one-line positioning ("49-year SA jeweler — bespoke, heirloom, repair"). Set up WhatsApp Business number + profile.
+- **Day 2:** Create Instagram + Facebook pages; write bios; link WhatsApp click-to-chat; set up highlights covers.
+- **Day 3:** Create Google Business Profile (SAB, service area). Start verification.
+- **Day 4:** Build WhatsApp catalog (first 20 pieces: photos, prices, descriptions).
+- **Day 5:** Shoot 15 photos + 5 short videos (process + finished pieces) on phone.
+- **Day 6:** Write 30 content captions in a bank; plan hashtag sets.
+- **Day 7:** Review GBP verification; ask 5 past clients for Google reviews.
+
+### Week 2 — Content Engine
+- **Day 8:** Post first Reel (process) + FB cross-post. Post WhatsApp Status.
+- **Day 9:** Post second Reel (heirloom story) + 3 photos. Join 5 FB community groups.
+- **Day 10:** Post third Reel (education). Send partner outreach to 5 wedding planners.
+- **Day 11:** Post TikTok (first). Reply to all comments/DMs within 1 hour.
+- **Day 12:** Post Reel (before/after repair). Send partner kit to 2 salons.
+- **Day 13:** Post FB group value post (jewelry care tip). Post WhatsApp Status x2.
+- **Day 14:** Weekly review: which post got most saves/shares? Note top format. Plan next week.
+
+### Week 3 — Partnerships & Paid
+- **Day 15:** Apply to 2 craft markets for next month.
+- **Day 16:** Apply to 1 bridal fair; list on Pink Book / SA Weddings directories.
+- **Day 17:** Set up Meta Ads: 1 ad set, R50/day, WhatsApp objective, 3 creatives.
+- **Day 18:** Set up Google Ads Search: R100/day, 5 keywords, 3 ad variations.
+- **Day 19:** Post Reel (49-years lesson). Outreach to 5 more creators (gifting).
+- **Day 20:** Host a mini open-studio (invite 5 past clients + 2 partners).
+- **Day 21:** Weekly review: ad spend, leads, cost per lead. Pause losers.
+
+### Week 4 — Scale & Systemize
+- **Day 22:** Post best-performing Reel format again (variation). Add 10 more catalog items.
+- **Day 23:** Send first WhatsApp broadcast to segmented list (value + new piece).
+- **Day 24:** Post TikTok + IG Reel. Pitch 3 corporate gifting prospects (Dec season).
+- **Day 25:** Collect 3 video testimonials from happy clients.
+- **Day 26:** Refresh GBP: new photos, a Google Post, reply to all reviews.
+- **Day 27:** Co-host a trunk show with a bridal boutique.
+- **Day 28:** Review month: revenue, leads, top channel, top content, top partner.
+- **Day 29:** Decide scale: increase ad budget 20% on winner; book next market.
+- **Day 30:** Document SOPs (content batch day, weekly review, partner follow-up). Set 90-day goals.
+
+---
+
+## Kanban Cards
+
+### Backlog
+- [ ] Define brand positioning & one-line pitch
+- [ ] Set up WhatsApp Business (profile, catalog, quick replies, labels)
+- [ ] Create Instagram + Facebook pages
+- [ ] Create & verify Google Business Profile (SAB)
+- [ ] Build photo/video content bank (15+ assets)
+- [ ] Write 30-caption content bank + hashtag sets
+- [ ] List on Pink Book / SA Weddings directories
+- [ ] Build partner kit (referral cards, display tray, QR)
+- [ ] Apply to craft markets (Kamers, Linden, Bay Harbour, Neighbourgoods)
+- [ ] Apply to bridal fairs (Oakfield, Cape Town Winter, Say I Do)
+- [ ] Set up Meta Ads (R50/day test)
+- [ ] Set up Google Search Ads (R100/day test)
+- [ ] Identify 30 nano/micro creators for gifting
+- [ ] Pitch 5 corporate gifting prospects
+
+### To Do (This Week)
+- [ ] Complete GBP verification
+- [ ] Add 20 items to WhatsApp catalog
+- [ ] Post 4 Reels + 1 TikTok
+- [ ] Join 5 FB community groups
+- [ ] Outreach to 5 wedding planners
+- [ ] Ask 5 clients for Google reviews
+
+### In Progress
+- [ ] Content batching (weekly shoot day)
+- [ ] Partner outreach & kit delivery
+- [ ] Ad testing & optimization
+
+### Done
+- [ ] Brand name & handle secured
+- [ ] WhatsApp Business number active
+- [ ] Social profiles created
+- [ ] GBP created (pending verification)
+
+### Metrics to Track Weekly
+| Metric | Target (Month 1) |
+|---|---|
+| Reels posted | 16–20 |
+| TikToks posted | 8–12 |
+| WhatsApp catalog items | 40+ |
+| Google reviews | 10+ |
+| Partner meetings | 5+ |
+| Ad spend | R3,000–R6,000 |
+| Cost per WhatsApp lead | <R200 (Meta), <R400 (Google) |
+| Sales attributed to marketing | track via discount codes + "how did you find us?" |
+
+---
+
+### Key Sources (consolidated)
+1. Shopify ZA — GBP optimization: https://www.shopify.com/za/blog/google-business-profile-optimization
+2. Google Business Profile guidelines: https://support.google.com/business/answer/3038177
+3. Jewel360 — SEO for jewelry: https://jewel360.com/blog/seo-for-jewelry
+4. GemFind — Instagram jewelry marketing: https://gemfind.com/blogs/digital-marketing/instagram-jewelry-marketing-tips
+5. GemFind — Facebook ads for jewelry: https://gemfind.com/blogs/digital-marketing/facebook-ads-jewelry-complete-guide
+6. GemFind — Jewelry influencer marketin

@@ -1,0 +1,333 @@
+===== 01_local_commerce_sa.md =====
+# Local Jewelry Commerce in South Africa ? Research Report
+## 1. South African Jewelry Market Overview
+### 1.1 Market size and growth
+### 1.2 Consumer behavior and demand drivers
+### 1.3 Structural notes
+## 2. Local Jewelry Shops & Directories (Beyond the Catalog)
+### 2.1 Directory platforms used in SA
+### 2.2 Named competitors by city (selected)
+### 2.3 Trade suppliers a home-based jeweler can use
+## 3. Home-Based / Studio Jewellers in SA and Their Models
+### 3.1 Observed models
+### 3.2 Common success factors for SA studio jewellers
+## 4. Customer Acquisition Channels That Work in SA
+### 4.1 WhatsApp (dominant)
+### 4.2 Facebook / Instagram
+### 4.3 Google Business Profile (GBP)
+### 4.4 Other channels
+## 5. Payments and Shipping
+### 5.1 Payment methods
+### 5.2 Shipping
+## 6. Pricing Norms
+### 6.1 Metal prices (ZAR, indicative, Oct 2026)
+### 6.2 Making charges and margins
+### 6.3 Pricing guidance for home-based model
+## 7. Legal & Compliance in South Africa
+### 7.1 Business registration
+### 7.2 Tax (SARS, as of 2026)
+### 7.3 Precious metals regulation
+### 7.4 Consumer protection
+### 7.5 Insurance
+### 7.6 Home-based / zoning
+## 8. Opportunities & Gaps for a 49-Year Craftsman
+### 8.1 Strengths to leverage
+### 8.2 Market gaps
+### 8.3 Risks to mitigate
+## 9. Sources
+## 10. Kanban Cards ? Actionable Tasks
+===== 02_trending_products.md =====
+# Trending Jewelry Products ? 2026 Global & South Africa
+## 1. Executive Summary
+## 2. Top Trending Jewelry Styles 2026 (Global)
+## 3. Trending Categories ? Deep Dive
+### 3.1 Personalized Name Necklaces
+### 3.2 Bespoke Engagement & Wedding Rings
+### 3.3 Silver Fashion Jewelry
+### 3.4 Ethical / Fairmined
+### 3.5 Platinum Bespoke
+### 3.6 Men's Jewelry
+### 3.7 Piercing / Flat Studs (Huggies, Labrets)
+### 3.8 Charm Bracelets
+### 3.9 Stacking Rings
+## 4. Social Media Trend Signals (Cited)
+### TikTok
+### Pinterest
+### Instagram
+## 5. South Africa ? Seasonal Demand Calendar
+## 6. Trend Accessibility: Hand-Craftsman vs Mass Production
+## 7. Trend Lifecycle (Estimated)
+## 8. Top 10 SKUs Dad Should Craft First
+## 9. Sources
+## 10. Kanban Cards
+### Backlog
+### To Do
+### In Progress
+### Done
+### Blocked
+===== 03_craftable_pieces.md =====
+# Home-Studio Craftable Jewelry: Feasibility & Profitability
+### For a 49-Year Veteran Gold/Silver Craftsman (South Africa)
+## 1. Executive Summary
+## 2. Home Studio Equipment (Fabrication-First)
+### 2.1 Minimum Viable Bench (?R25k?R60k if buying new; much less if already owned)
+### 2.2 Casting vs Fabrication
+## 3. Pieces Feasible with Traditional Hand Tools
+## 4. Materials
+### 4.1 Metal Price Reference (ZAR/gram, 26?27 Oct 2026 spot-derived)
+### 4.2 Sourcing in South Africa
+## 5. Time per Piece & Labor Cost
+## 6. Margin Analysis
+### 6.1 Pricing Formula (industry standard for handmade)
+### 6.2 Worked Examples
+#### Example A ? 9k Gold Plain Band (4g)
+#### Example B ? Silver Name Necklace (6g incl. chain)
+#### Example C ? 18k Gold Bezel Pendant (3g gold + R800 stone)
+#### Example D ? Heirloom Redesign (client supplies 8g 18k gold + diamond)
+## 7. Heirloom Redesign / Upcycling as a Service
+## 8. Custom Bespoke Commissions Workflow
+## 9. Pieces to Avoid (Complex Casting / Equipment-Heavy)
+## 10. Starter Catalog ? 15 Craftable SKUs
+## 11. Kanban Cards
+### To Do
+### In Progress
+### Done (when completed)
+### Backlog / Avoid
+## 12. Sources
+===== 04_pricing_gold_rates.md =====
+# Jewelry Pricing & Gold Rates ? South Africa
+### Research report for a home-based jeweler (Dad's workshop)
+## 1. Current gold price in ZAR per gram (by karat)
+### Silver
+### Scrap / buy-back reference (what gold buyers pay in SA)
+## 2. SA jeweller benchmarks
+## 3. Making-charge norms in SA (R/gram by complexity)
+## 4. Pricing formulas for custom pieces
+### Core formula (cost-plus, recommended default)
+### Alternative formulas
+### Stone pricing
+### Weight & wastage
+## 5. Markup strategies
+## 6. Currency considerations (ZAR volatility, hedging)
+## 7. How to quote custom work (per gram + making + stones)
+## 8. Recommended price list template for Dad
+### Gold ? 9k (everyday / affordable)
+### Gold ? 18k (fine / bespoke)
+### Silver ? sterling 925
+### Services
+## 9. Sources
+## Kanban cards
+===== 05_website_ecommerce.md =====
+# Website & Ecommerce Strategy ? South African Home-Based Jeweler (49 Years)
+## 1. Executive Summary
+## 2. Platform Comparison (SA)
+## 3. Payment Gateways in South Africa
+## 4. Shipping & Courier Integration (SA)
+## 5. Trust Signals for SA Buyers
+## 6. Mobile-First (60%+ SA Searches on Phones)
+## 7. Local SEO for Jewelry ("Jeweller Near Me", City Keywords)
+## 8. WhatsApp Commerce
+## 9. Cost Comparison (Monthly + Transaction Fees)
+## 10. Recommended 6-Page Site Structure
+## 11. Launch Checklist
+## 12. Kanban Cards
+### To Do
+### In Progress
+### Done / Launch Gate
+### Backlog / Growth
+## Sources
+===== 06_marketing_channels.md =====
+# Marketing Channels Playbook ? South African Home-Based Jeweler (49 Years Experience)
+## 1. Google Business Profile (GBP) ? Setup & Optimization for SA
+### Setup steps
+### Optimization checklist (weekly)
+### Sources
+## 2. Instagram & Facebook Strategy
+### Profile optimization
+### Content mix (4 pillars)
+### Reels (the reach engine)
+### Hashtag sets (rotate, 8?12 per post)
+### Facebook
+### Sources
+## 3. TikTok for Jewelry (Process Content)
+### Content ideas that work
+### Strategy
+### Sources
+## 4. WhatsApp Business (Catalog, Broadcasts, Status)
+### Setup
+### Catalog (up to 500 items)
+### Broadcasts & Status
+### Sources
+## 5. Referral Networks (Salons, Boutiques, Interior Designers, Wedding Planners)
+### Target partners
+### Activation playbook
+### Sources
+## 6. Facebook Community Groups by City
+### Group types to join (per city)
+### Rules of engagement
+### Sources
+## 7. Paid Ads (Facebook/Instagram/Google) ? Budgets in ZAR
+### Meta (FB/IG) Ads
+### Google Ads (Search)
+### Measurement
+### Sources
+## 8. Content Ideas That Resonate
+### High-performing concepts
+### Sources
+## 9. Influencer / Micro-Influencer (SA Jewelry Space)
+### SA rate card (ZAR) ? from usesnippet.app
+### Outreach playbook
+### Sources
+## 10. Offline: Markets, Pop-Ups, Bridal Fairs
+### Craft markets (SA)
+### Bridal fairs / wedding expos
+### Pop-ups & open studio
+### Sources
+## 11. 30-Day Launch Plan (Daily Tasks)
+### Week 1 ? Foundations
+### Week 2 ? Content Engine
+### Week 3 ? Partnerships & Paid
+### Week 4 ? Scale & Systemize
+## Kanban Cards
+### Backlog
+### To Do (This Week)
+### In Progress
+### Done
+### Metrics to Track Weekly
+### Key Sources (consolidated)
+===== 07_ethical_sustainable.md =====
+# Ethical & Sustainable Jewelry Market ? South Africa
+## 1. Executive Summary
+## 2. Fairmined / Fairtrade Gold in South Africa
+### 2.1 Fairmined model
+### 2.2 Fairmined licensee process & cost (small jeweler)
+### 2.3 Fairtrade Gold (alternative)
+### 2.4 Fairmined vs Fairtrade ? which to pick
+## 3. Recycled Gold & Silver Sourcing
+### 3.1 The local supply chain
+### 3.2 The greenwashing debate (important)
+## 4. Lab-Grown Diamonds in South Africa
+### 4.1 Availability
+### 4.2 Acceptance & market dynamics
+### 4.3 Ethical baseline: Kimberley Process
+## 5. Consumer Demand for Ethical Jewelry (Demographics & Premium)
+### 5.1 Generational willingness to pay
+### 5.2 South African jewelry market context
+### 5.3 What "ethical" means to SA buyers
+## 6. How a Small/Home-Based Jeweler Can Certify & Authenticate the Sourcing Story
+### 6.1 Certification ladder (pragmatic, low-to-high cost)
+### 6.2 Chain-of-custody discipline (the real work)
+### 6.3 Storytelling assets that authenticate (no cert needed)
+## 7. Marketing the Ethical Angle for Dad's 49-Year Craft
+### 7.1 Positioning: "Heritage + Honesty"
+### 7.2 Message pillars
+### 7.3 Channel & content playbook
+### 7.4 Emotional hook for the "Dad" brand
+## 8. Competitive Landscape ? Ethical Jewelers in South Africa
+## 9. Actionable Steps to Position Dad as Ethical/Sustainable
+### Phase 0 ? Foundation (Week 1?2, low cost)
+### Phase 1 ? Quick wins (Month 1?2)
+### Phase 2 ? Certification (Month 2?6)
+### Phase 3 ? Scale & credibility (Month 6?12)
+### Phase 4 ? Growth (Year 2+)
+## 10. Kanban Cards
+### Backlog
+## 11. Sources
+===== 08_bespoke_custom_market.md =====
+# Bespoke / Custom Jewelry Market ? South Africa
+## 1. Executive Summary
+## 2. Bespoke Jewelry Demand in South Africa
+### 2.1 Market size & growth
+### 2.2 Demand segments
+### 2.3 Consumer behavior
+## 3. Customer Journey for Custom Pieces
+### Key journey insights
+## 4. Pricing Models for Bespoke
+### 4.1 Standard formula (SA-adapted)
+### 4.2 Metal rates (SA, 2026)
+### 4.3 Making charges & labor
+### 4.4 Stone pricing (SA)
+### 4.5 Pricing tiers (indicative SA bespoke engagement ring)
+### 4.6 Deposit & payment terms (SA norm)
+## 5. Lead Times & Expectations
+## 6. Competitors Offering Bespoke in SA
+### 6.1 Established houses
+### 6.2 Market structure note
+### 6.3 Competitive positioning for the veteran home-based jeweler
+## 7. Tools for Design Communication
+### 7.1 Hand sketches
+### 7.2 CAD (Computer-Aided Design)
+### 7.3 3D printing / prototyping
+### 7.4 Communication channels (SA norm)
+### 7.5 Recommended stack for a home-based jeweler
+## 8. Heirloom Redesign / Upcycling as Signature Service
+### 8.1 Why it's the best niche for a veteran jeweler
+### 8.2 Service menu
+### 8.3 Process (heirloom-specific)
+### 8.4 Pricing for heirloom work
+### 8.5 Risks specific to heirloom work
+## 9. Risk Management
+### 9.1 Deposits & contracts
+### 9.2 Stone sourcing
+### 9.3 Fabrication & delivery risks
+### 9.4 Legal/compliance (SA)
+### 9.5 Financial controls
+## 10. Kanban Cards
+### Card template (per job)
+### Backlog / Lead cards
+### Consultation cards
+### Design cards
+### Approval/Deposit cards
+### Fabrication cards
+### QC & Delivery cards
+### Aftercare cards
+### WIP limits (suggested)
+## 11. Recommended Action Plan for the Veteran Jeweler
+## 12. Sources
+===== 09_youtube_insights.md =====
+# YouTube Jewelry Business Insights ? 2026 Video Research
+### For a 49-Year Veteran Gold/Silver Craftsman (South Africa)
+## 1. Executive Summary
+## 2. Video-by-Video Key Takeaways
+### 2.1 "How To Start A Jewelry Business in 2026" (Michelle Bal)
+### 2.2 "40 Jewelry Business Ideas That Sell Like Crazy in 2026"
+### 2.3 "The BIGGEST 2026 Jewelry Trends" (Cassie)
+### 2.4 "Top Jewelry Trends That'll Be All Over Your Feeds in 2026" (E! Online)
+### 2.5 "10 Handmade Products to MAKE that will ACTUALLY SELL in 2026" (jgzhBIKBKAg)
+### 2.6 "How To Start A Successful Jewelry Business (No Experience)" (TUn6no7f290)
+### 2.7 "Jewelry Trends 2026 ? Business Insider" & "Top Jewelry Trends of 2026 (meetglimpse)"
+## 3. Niche Selection Framework
+## 4. 40 Product Ideas ? Filtered for a 49-Year Craftsman
+### Tier 1 ? Craft Directly (High Fit, High Margin)
+### Tier 2 ? Adapt or Outsource (Medium Fit)
+### Tier 3 ? Avoid (Low Fit for Veteran Craftsman)
+### Top 10 Craftable SKUs (from existing research 02 + this report)
+## 5. Trending vs Declining Styles (2026)
+### TRENDING (IN)
+### DECLINING (OUT)
+## 6. Pricing & Margin Insights from Videos
+### From "How To Start A Jewelry Business in 2026":
+### From "40 Jewelry Business Ideas":
+### From existing research (03_craftable_pieces + 04_pricing):
+### Pricing Principles Synthesized:
+## 7. Marketing Tactics Mentioned in Videos
+### From "How To Start A Jewelry Business in 2026":
+### From "40 Jewelry Business Ideas":
+### From "BIGGEST 2026 Jewelry Trends":
+### From E! Online:
+### Synthesized Marketing Tactics for Dad (cross-referenced with existing research 06):
+## 8. Actionable Recommendations for Dad
+### Immediate (This Week)
+### Short-Term (This Month)
+### Medium-Term (3 Months)
+### Long-Term (6+ Months)
+## 9. Kanban Cards
+### Backlog
+### To Do
+### In Progress
+### Done
+### Blocked
+## 10. Sources
+### YouTube Videos
+### Existing Research (Cross-Referenced)
+### Additional Sources Cited in Videos
